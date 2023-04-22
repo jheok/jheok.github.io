@@ -12,5 +12,5 @@ slug: daily
 description: >
   This is a daily
 
-order: 2
+order: 1
 ---

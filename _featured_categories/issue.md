@@ -12,5 +12,5 @@ slug: issue
 description: >
   This is an issue
 
-order: 3
+order: 2
 ---
