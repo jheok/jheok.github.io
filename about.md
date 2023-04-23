@@ -1,11 +1,8 @@
 ---
 layout: about
-title: About
+title: 오준혁
 permalink: /about/
 ---
-
-# 오준혁
-
 
 # About me
 현재 Python과 Java 를 주력으로 3년차 백엔드 엔지니어로써 일하고 있습니다.
@@ -13,22 +10,21 @@ permalink: /about/
 저는 개발자란 사용자가 원하는 데이터를 정확하고 신속하게 전달하는 중간 매개자라고 생각하고 있습니다
 
 | github | [jheok](https://github.com/jheok), [jheok318](https://github.com/jheok318) |
-| -----: | :------ | 
-| blog | [github.io](https://jheok.github.io/about/) |
-{:.stretch-table}
+| :----- | :------ | 
+| blog | [jheok.github.io](https://jheok.github.io/about/) |
 
-
+---
 # Work Experience
 
 ## Mobigen
+> 웹 기반 빅데이터 분석 플랫폼 서비스
+
 | period | 21.01.01 ~ 현재 (2년 4개월)
-| ---: | :--- |
+| :----- | :----- |
 |  position | Python, Java 백엔드 엔지니어 |
 |  project | 웹 백엔드 기반 데이터 분석 플랫폼 개발 |
-|  tech | Python & (fastApi, flask), pySpark, Pandas, Polars, Java & Spring, JPA, Grpc, MariaDB, Postgresql |
 {:.stretch-table}
 
-### 
 
 ```
 4. 프로젝트명 :
@@ -77,8 +73,9 @@ spark cluster 구축 및 file system 기반 빅데이터 파티셔닝으로 인�
 
 ---
 ## Mobigen (intern)
+
 | period | 20.07.01 ~ 20.12.31 (6개월)
-| ---: | :--- |
+| :--- | :-------- |
 |  position | Python 백엔드 엔지니어 |
 |  project | 웹 백엔드 기반 데이터 분석 플랫폼 개발 |
 |  tech | Python & flask, pySpark, MariaDB, Postgresql, docker, k8s |
@@ -91,8 +88,9 @@ spark cluster 구축 및 file system 기반 빅데이터 파티셔닝으로 인�
 
 ---
 ## 한양대 (erica)
+
 | period | 19.03 ~ 21.02
-| ---: | :--- |
+| :--- | :---- |
 | 전공 | 컴퓨터 공학과 |
 | 성적 | 3.65 / 4.5 |
 | 졸업상태 | 졸업 / 편입 |
