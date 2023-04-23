@@ -48,13 +48,21 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             about
+  - title:             About
     url:               /about/
-  - title:             issue
+  - title:             Cs
+    url:               /cs/
+  - title:             Java
+    url:               /java/
+  - title:             Python
+    url:               /python/
+  - title:             Tech
+    url:               /tech/
+  - title:             Algorithm
+    url:               /algorithm/
+  - title:             Issue
     url:               /issue/
-  - title:             daily
-    url:               /daily/
-  - title:             search
+  - title:             Search
     url:               /search/
 
 # Add links to the footer.

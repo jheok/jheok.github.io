@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "hello"
+title:  기본적인 파일 생성
 date:   2023-04-22 15:03:06 +0900
-categories: issue
+categories: tech
+tag: ["jekyll"]
 ---
+
 
 기본적으로 파일 만드는법
 `YEAR-MONTH-DAY-title.MARKUP`

@@ -3,14 +3,14 @@
 layout: list
 
 # The title of the tag's page.
-title: Issue
+title: Cs
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: issue
+slug: cs
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  This is an issue
+  This is a cs
 
-order: 6
+order: 1
 ---
