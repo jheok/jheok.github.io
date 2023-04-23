@@ -54,6 +54,8 @@ menu:
     url:               /issue/
   - title:             daily
     url:               /daily/
+  - title:             search
+    url:               /search/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -79,7 +81,10 @@ paginate_path:         /:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
+
+# local 실행시 주석제거 & remote push 시 주석처리
 #theme: jekyll-theme-hydejack
+
 remote_theme: hydecorp/hydejack@v9
 
 
