@@ -26,6 +26,7 @@ category=""
 sub=""
 tags=""
 date=$(date '+%Y-%m-%d')
+datetime=$(date '+%Y-%m-%d %H:%M:%S+0900')
 
 while getopts "t:c:s:a:" opt
 do
@@ -75,7 +76,7 @@ fi
 
 echo "---
 layout: post
-date: ${date}
+date: ${datetime}
 title: ${title}
 categories: ${category}
 tag: [${tag}]
