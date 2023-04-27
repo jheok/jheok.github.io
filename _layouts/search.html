@@ -1,5 +1,5 @@
 ---
-layout: search
+layout: default
 ---
 
 <div class="common-header search">
@@ -19,48 +19,48 @@ layout: search
 
 <script>
   window.simpleJekyllSearch = new SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '{{ site.baseurl }}/assets/json/search.json',
-  searchResultTemplate: `
-      <li>
-        <div>
-          <i class="fas fa-book fa-fw"></i>
-          <a href="{url}">{title}</a>
-        </div>
-      </li>
-    `,
-  // searchResultTemplate: `
-  //     <li>
-  //       <div>
-  //         <i class="fas fa-folder fa-fw"></i>
-  //         <a href="{url}">{categories}</a>
-  //       </div>
-  //       <div>
-  //         <i class="fas fa-book fa-fw"></i>
-  //         <a href="{url}">{title}</a>
-  //       </div>
-  //       <div>
-  //         <i class="fas fa-tags fa-fw"></i>
-  //         <a href="{url}">{tags}</a>
-  //       </div>
-  //       <div>
-  //         <i class="fas fa-calendar-alt fa-fw"></i>
-  //         <a href="{url}">{date}</a>
-  //       </div>
-  //       <div>
-  //         <i class="fas fa-link fa-fw"></i>
-  //         <a href="{url}" style="font-size: 1rem;">{urlString}</a>
-  //       </div>
-  //     </li>
-  //   `,
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ site.baseurl }}/assets/json/search.json',
+    searchResultTemplate: `
+        <li>
+          <div>
+            <i class="fas fa-book fa-fw"></i>
+            <a href="{url}">{title}</a>
+          </div>
+        </li>
+      `,
+    // searchResultTemplate: `
+    //     <li>
+    //       <div>
+    //         <i class="fas fa-folder fa-fw"></i>
+    //         <a href="{url}">{categories}</a>
+    //       </div>
+    //       <div>
+    //         <i class="fas fa-book fa-fw"></i>
+    //         <a href="{url}">{title}</a>
+    //       </div>
+    //       <div>
+    //         <i class="fas fa-tags fa-fw"></i>
+    //         <a href="{url}">{tags}</a>
+    //       </div>
+    //       <div>
+    //         <i class="fas fa-calendar-alt fa-fw"></i>
+    //         <a href="{url}">{date}</a>
+    //       </div>
+    //       <div>
+    //         <i class="fas fa-link fa-fw"></i>
+    //         <a href="{url}" style="font-size: 1rem;">{urlString}</a>
+    //       </div>
+    //     </li>
+    //   `,
 
-  noResultsText: 'No results found',
-  limit: 10,
-  fuzzy: false,
-  exclude: ['Welcome']
-})
-window.onload = function() {
-  window.simpleJekyllSearch.search(document.getElementById('search-input').value);
-};
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: []
+  })
+  window.onload = function() {
+    window.simpleJekyllSearch.search(document.getElementById('search-input'));
+  };
 </script>
