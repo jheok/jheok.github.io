@@ -10,8 +10,8 @@ permalink: /about/
 저는 개발자란 사용자가 원하는 데이터를 정확하고 신속하게 전달하는 중간 매개자라고 생각하고 있습니다
 
 | github | [jheok](https://github.com/jheok), [jheok318](https://github.com/jheok318) |
-| :----- | :------ | 
-| blog | [jheok.github.io](https://jheok.github.io/about/) |
+|:-------|:---------------------------------------------------------------------------| 
+| blog   | [jheok.github.io](https://jheok.github.io/about/)                          |
 
 ---
 # Work Experience
@@ -19,35 +19,32 @@ permalink: /about/
 ## Mobigen
 > 웹 기반 빅데이터 분석 플랫폼 서비스
 
-| period | 21.01.01 ~ 현재 (2년 4개월)
-| :----- | :----- |
-|  position | Python, Java 백엔드 엔지니어 |
-|  project | 웹 백엔드 기반 데이터 분석 플랫폼 개발 |
+| period   | 21.01.01 ~ 현재 (2년 4개월) |
+|:---------|:-----------------------|
+| position | Python, Java 백엔드 엔지니어  |
+| project  | 웹 백엔드 기반 데이터 분석 플랫폼 개발 |
 {:.stretch-table}
 
+### CI/CD 구축 (23.04.01 ~ , 현재)
+> Java, Groovy, declarative pipeline, GitHub, Gitlab, ArgoCD, Jenkins, Dockerfile
+- Gitlab - Jenkins - ArgoCd CI/CD 구축 참여 (Jenkins 통합화 기여) 
+- 통합 JenkinsFIle 구축 (declarative pipeline 이용)
+- jenkins - sonarqube - slack 연동 (daily build 결과 report 개선)
+
+### 데이터 정보 서비스 개선 (23.01.01 ~ 23.03.31, 3개월)
+> Java & Spirng & Jpa, Flyway, mariaDB
+- spring datasource 기반 에서 db 형상관리 flyway 로 마이그레션 (db history 구축)
+- JPA 기반 기존 성능 향상 (data 로딩 개선)
+
+### 웹 기반 데이터 분석 플랫폼 개발 (22.07.01 ~ 22.12.31, 6개월)
+> Java & Spring & Jpa, Python & FastApi, Mariadb, flyway, sqlalchemy, pandas, mecab, textrank
+- EDA(Exploratory Data Analysis) 대표값, 이상치, 상관관계, 산점도 등 시각화 데이터 추출
+- NLP(Natural language processing) WordCount, 핵심문장, 연관단어 분석 추출
+- GEO 주소, 위도경도 에 따른 폴리곤 추출
+- 로드 밸런싱 구조 적용
+- clustering 화
 
 ```
-4. 프로젝트명 :
-- 주요 업무 : 백엔드 전담
-- 담당 역할 : 웹 백엔드 개발
-- 개발 환경 : java(spring, jpa)
-- 진행 기간 : 23년/1월/1일 ~ 
-- 프로젝트 진행 인원 : 3
-- 상세 내용 : 데이터 분석 플랫폼 사용에 필수적으로 사용되는 연결정보, jdbc 데이터 및 파일관리등 Spring, JPA, querydsl 를 이용한 데이터 serving 기능 개발
-
-3. 프로젝트명 :
- - 주요 업무 : 백엔드 전담
- - 담당 역할 : 데이터 분석 플랫폼 개발
- - 개발 환경 : java(spring, jpa), python(fastapi), mariadb
- - 진행 기간 : 22년/6월/1일 ~ 22년/12월/31일 (O년 6개월)
- - 프로젝트 진행 인원 : 1
- - 상세 내용 : 사용자가 원하는 파일을 업로드하여 그에대한 빅데이터분석결과를 반환 (eda, nlp, geo) 크게 세가지에 관한 데이터 분석
-eda : 대표값, 이상치, 상관관계, 산점도 등
-nlp : wordcount, 핵심문장 추출, 단어 연관어 분석
-geo : 주소, 위도경도 에 따른 폴리곤 추출
-java(management) - python(executor), 로드밸런싱 구조 적용
-
-
 2. 프로젝트명 :
  - 주요 업무 : 백엔드 전담
  - 담당 역할 : geodata 캐시 서버
@@ -74,11 +71,11 @@ spark cluster 구축 및 file system 기반 빅데이터 파티셔닝으로 인�
 ---
 ## Mobigen (intern)
 
-| period | 20.07.01 ~ 20.12.31 (6개월)
-| :--- | :-------- |
-|  position | Python 백엔드 엔지니어 |
-|  project | 웹 백엔드 기반 데이터 분석 플랫폼 개발 |
-|  tech | Python & flask, pySpark, MariaDB, Postgresql, docker, k8s |
+| period   | 20.07.01 ~ 20.12.31 (6개월)                                 |                                 
+|:---------|:----------------------------------------------------------|
+| position | Python 백엔드 엔지니어                                           |
+| project  | 웹 백엔드 기반 데이터 분석 플랫폼 개발                                    |
+| tech     | Python & flask, pySpark, MariaDB, Postgresql, docker, k8s |
 {:.stretch-table}
 
 ### 자체 DSL 및 spark 기반 데이터 분석프로그램 분석 & 개발 (20.07.01 ~ 20.12.31, 6개월)
@@ -89,11 +86,11 @@ spark cluster 구축 및 file system 기반 빅데이터 파티셔닝으로 인�
 ---
 ## 한양대 (erica)
 
-| period | 19.03 ~ 21.02
-| :--- | :---- |
-| 전공 | 컴퓨터 공학과 |
-| 성적 | 3.65 / 4.5 |
-| 졸업상태 | 졸업 / 편입 |
+| period | 19.03 ~ 21.02 |
+|:-------|:--------------|
+| 전공     | 컴퓨터 공학과       |
+| 성적     | 3.65 / 4.5    |
+| 졸업상태   | 졸업 / 편입       |
 {:.stretch-table}
 
 
