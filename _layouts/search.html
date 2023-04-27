@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: plain
 ---
 
 <div class="common-header search">
@@ -22,30 +22,38 @@ layout: default
   searchInput: document.getElementById('search-input'), //입력부분에 해당하는 요소
   resultsContainer: document.getElementById('results-container'), //출력부분에 해당하는 요소
   json: '{{ site.baseurl }}/assets/json/search.json', //검색 대상이 되는 검색 데이터가 있는 json 파일
+  // searchResultTemplate: `
+  //     <li>
+  //       <div>
+  //         <i class="fas fa-folder fa-fw"></i>
+  //         <a href="{url}">{categories}</a>
+  //       </div>
+  //       <div>
+  //         <i class="fas fa-book fa-fw"></i>
+  //         <a href="{url}">{title}</a>
+  //       </div>
+  //       <div>
+  //         <i class="fas fa-tags fa-fw"></i>
+  //         <a href="{url}">{tags}</a>
+  //       </div>
+  //       <div>
+  //         <i class="fas fa-calendar-alt fa-fw"></i>
+  //         <a href="{url}">{date}</a>
+  //       </div>
+  //       <div>
+  //         <i class="fas fa-link fa-fw"></i>
+  //         <a href="{url}" style="font-size: 1rem;">{urlString}</a>
+  //       </div>
+  //     </li>
+  //   `,
   searchResultTemplate: `
-      <li>
-        <div>
-          <i class="fas fa-folder fa-fw"></i>
-          <a href="{url}">{categories}</a>
-        </div>
-        <div>
-          <i class="fas fa-book fa-fw"></i>
-          <a href="{url}">{title}</a>
-        </div>
-        <div>
-          <i class="fas fa-tags fa-fw"></i>
-          <a href="{url}">{tags}</a>
-        </div>
-        <div>
-          <i class="fas fa-calendar-alt fa-fw"></i>
-          <a href="{url}">{date}</a>
-        </div>
-        <div>
-          <i class="fas fa-link fa-fw"></i>
-          <a href="{url}" style="font-size: 1rem;">{urlString}</a>
-        </div>
-      </li>
-    `,
+    <li>
+      <div>
+        <i class="fas fa-book fa-fw"></i>
+        <a href="{url}">{title}</a>
+      </div>
+    </li>
+  `,
   noResultsText: 'No results found',
   limit: 10,
   fuzzy: false,
