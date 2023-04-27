@@ -15,12 +15,13 @@ layout: default
 </div>
 
 
-<script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
+
 <script>
   window.simpleJekyllSearch = new SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '{{ site.baseurl }}/assets/json/search.json',
+  json: '{{ site.url }}{{ site.baseurl }}/assets/json/search.json',
   searchResultTemplate: `
       <li>
         <div>
