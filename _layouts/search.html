@@ -1,5 +1,5 @@
 ---
-layout: plain
+layout: default
 ---
 
 <div class="common-header search">
@@ -9,19 +9,37 @@ layout: plain
       type="search" 
       tabindex="1" 
       spellcheck="false" 
-      placeholder="Search"
+      placeholder="검색어를 입력하세요."
     >
   </div>
 </div>
 
-<ul id="results-container"></ul>
+<div class="container">
+  <div class="row">
+   <div class="col-12">
+     <div id="search-bar">
+       <i class="fa fa-search" aria-hidden="true"></i>
+       <input id="search-input" type="text" placeholder="검색어를 입력하세요." />
+     </div>
+     <ul id="results-container"></ul>
+   </div>
+  </div>
+</div>
 
 <script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
 <script>
   window.simpleJekyllSearch = new SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'), //입력부분에 해당하는 요소
-  resultsContainer: document.getElementById('results-container'), //출력부분에 해당하는 요소
-  json: '{{ site.baseurl }}/assets/json/search.json', //검색 대상이 되는 검색 데이터가 있는 json 파일
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '{{ site.baseurl }}/assets/json/search.json',
+  searchResultTemplate: `
+      <li>
+        <div>
+          <i class="fas fa-book fa-fw"></i>
+          <a href="{url}">{title}</a>
+        </div>
+      </li>
+    `,
   // searchResultTemplate: `
   //     <li>
   //       <div>
@@ -46,18 +64,10 @@ layout: plain
   //       </div>
   //     </li>
   //   `,
-  searchResultTemplate: `
-    <li>
-      <div>
-        <i class="fas fa-book fa-fw"></i>
-        <a href="{url}">{title}</a>
-      </div>
-    </li>
-  `,
   noResultsText: 'No results found',
   limit: 10,
   fuzzy: false,
-  exclude: ['Pages']
+  exclude: []
 })
   window.onload = function() {
     window.simpleJekyllSearch.search(document.getElementById('search-input').value);
