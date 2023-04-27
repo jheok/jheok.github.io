@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: search
 ---
 
 <div class="common-header search">
@@ -60,7 +60,7 @@ layout: default
   fuzzy: false,
   exclude: ['Welcome']
 })
-  window.onload = function() {
-    window.simpleJekyllSearch.search(document.getElementById('search-input').value);
-  };
+window.onload = function() {
+  window.simpleJekyllSearch.search(document.getElementById('search-input').value);
+};
 </script>
