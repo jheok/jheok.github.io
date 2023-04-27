@@ -6,6 +6,8 @@ categories: issue
 tag: [spark, parquet, wkt]
 ---
 
+- 이슈사항
+  - 지도 데이터의 용량이 수십 기가를 넘음으로 인해 build시 혹은 데이터 사용시 이슈가 발생하고 있다
 
 - 제약사항
   - spark 2.4.4 이상 필요
