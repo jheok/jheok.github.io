@@ -4,12 +4,12 @@ pwd=$PWD
 title_flag=0
 category_flag=0
 tag_flag=0
-valid_categories=("algorithm" "cs" "issue" "java" "python" "tech")
+valid_categories=("algorithm" "cs" "issue" "java" "python" "tech", "etc")
 
 ## 도움말 출력하는 함수
 usage() {
   echo "    -t                타이틀"
-  echo "    -c                카테고리 [ algorithm cs issue java python tech ]"
+  echo "    -c                카테고리 [ algorithm cs issue java python tech etc ]"
   echo "    -s                서브 카테고리"
   echo "    -a                태그"
   exit 0
