@@ -62,6 +62,8 @@ menu:
     url:               /algorithm/
   - title:             Issue
     url:               /issue/
+  - title:             Etc
+    url:               /etc/
   - title:             Search
     url:               /search/
 
