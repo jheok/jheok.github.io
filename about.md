@@ -16,7 +16,7 @@ permalink: /about/
 ---
 # Work Experience
 
-## Mobigen
+## Mobigen (full-time employee)
 > 웹 기반 빅데이터 분석 플랫폼 서비스
 
 | period   | 21.01.01 ~ 현재 (2년 4개월) |

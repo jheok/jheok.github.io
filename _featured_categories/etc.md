@@ -12,5 +12,5 @@ slug: etc
 description: >
   This is a etc
 
-order: 5
+order: 7
 ---
