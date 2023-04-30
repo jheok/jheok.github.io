@@ -26,128 +26,166 @@ permalink: /about/
 {:.stretch-table}
 
 ### CI/CD 강화 (23.04.01 ~ , 현재)
-> Java, Groovy, declarative pipeline, GitHub, Gitlab, ArgoCD, Jenkins, Dockerfile, jira
 
-- 개발 참여인원 : 4명
-- Gitlab - Jenkins - ArgoCd CI/CD 구축 (Jenkins 통합화 / Gitlab 모듈화 기여)
-- 통합 organization JenkinsFIle 구축 (조직 내의 모든 repo 에서 하나의 jenkinsFile 로 통합화)
-- jenkins - sonarqube - slack 연동 (daily build 결과 report 개선)
+| Skill           |                                                               |
+|:----------------|:--------------------------------------------------------------|
+| 프로그래밍 언어 및 툴    | Java, Groovy                                                  |
+| 데이터베이스          | MariaDB, PostgreSQL, Tibero, Oracle, Minio, HDFS, 자체DB, Redis |
+| 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)                                      |
+| CI/CD           | Jenkins, ArgoCD                                               |
+| 버전 관리 및 협업 도구   | GitHub, GitLab, Jira                                          |
+| CI/CD 언어      | Declarative pipeline                                          |
+{:.stretch-table}
+
+- 개발 참여인원: 4명
+- GitLab, Jenkins, ArgoCD를 활용한 고성능 CI/CD 구축 (Jenkins 통합화 및 GitLab 모듈화 기여)
+- 효율적인 리소스 활용을 위한 통합 Jenkinsfile 구축 (모든 리포지토리에서 하나의 Jenkinsfile로 통합)
+- Jenkins, SonarQube, Slack 연동을 통한 빠른 일일 빌드 결과 및 성능 분석 보고 개선
 
 [담당 역할]
 - 개발
 
 [성과 및 배운점]
-- 기존 단순한 unittest, build 정도의 수준에서 unittest, e2etest, build, deploy 수준까지 끌어올림
-- 각 repo 마다 각자의 ci/cd 과정을 통합적으로 동일한 과정으로 통합화 개발자는 초기 dockerfile 개발 
-  및 단순 conf 만 설정하면 ci/cd 진행이 가능하도록 개선  
-- 개발자는 코드 개발만을 잘하는 사람이 아닌 jenkins 와 같은 툴을 잘 사용하는 것도 좋은 개발자로 가는 방법중
-  하나임을 깨달음
+- 기존의 단순한 단위 테스트와 빌드 과정을 확장하여, 엔드 투 엔드 테스트와 배포까지 포괄하는 통합적인 CI/CD 파이프라인을 구축
+- 모든 리포지토리에서 일관된 CI/CD 프로세스를 구현하여, 개발자들이 초기 Dockerfile 작성 및 간단한 설정만으로 손쉽게 CI/CD를 진행할 수 있도록 개선
+- 좋은 개발자가 되기 위해서는 코드 작성 능력 뿐만 아니라, Jenkins와 같은 도구를 능숙하게 사용하는 것이 중요하다는 것을 깨달음
 
 ### 데이터 분석 플랫폼 개발 (21.11.01 ~ 현재, 1년 6개월)
-> python & FastApi, pandas, polars, sqlAlchemy, redis, mariadb, postgresql, tibero, oracle,
-> minio, hdfs, 자체DB, Yacc, Lex, jenkins, swagger, sonarqube, git, jira
 
-- 개발 참여인원 : 2명
-- 쿼리 토큰화 및 파싱, 암호화(RSA) 처리
-- pandas 와 polars 의 조합으로 분석 성능 및 처리 속도 향상
-- yacc(parser), lex(tokenizer) 를 통한 DSL 개발
-- jenkins 를 통한 ci/cd 진행
-- release 버전 외부 업체 배포 완료
+| Skill           |                                                               |
+|:----------------|:--------------------------------------------------------------|
+| 프로그래밍 언어 및 툴    | Python, FastAPI, Yacc, Lex, Pandas, Polars, SQLalchemy        |
+| 데이터베이스          | MariaDB, PostgreSQL, Tibero, Oracle, Minio, HDFS, 자체DB, Redis |
+| 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)                                      |
+| CI/CD           | Jenkins                                                       |
+| 버전 관리 및 협업 도구   | Git, Swagger, SonarQube, Jira                                 |
+{:.stretch-table}
+
+- 개발 참여인원: 2명
+- 쿼리 토큰화, 파싱 및 RSA 암호화를 통한 데이터 보안 강화
+- Pandas와 Polars 결합으로 데이터 분석 성능 및 처리 속도 대폭 개선
+- Yacc(parser)와 Lex(tokenizer)를 이용하여 높은 성능의 DSL 개발
+- Jenkins를 활용하여 빠른 CI/CD 프로세스 구현
+- 최적화된 릴리스 버전 외부 업체에 성공적으로 배포 완료
 
 [담당 역할]
 - 설계, 개발
 
 [성과 및 배운점]
-- 기존 db 에 직접연결하여 query 를 날리던 서비스와 비교하여 2초 쿼리를 1초 쿼리로 성능향상
-- query + dsl 기반으로 인해 기존 query 만을 사용하게 되면 복잡한 query 를 dsl 을 통해 단순화
+- 데이터베이스에 직접 연결하여 쿼리를 수행하던 서비스를 최적화하여, 원래 2초 걸리던 쿼리 처리 시간을 1초로 줄여 성능 향상
+- 쿼리와 DSL 기반의 접근 방식을 도입하여, 기존의 복잡한 쿼리를 DSL을 활용해 단순하고 가독성 높은 형태로 변환. 이를 통해 개발 및 유지 보수 과정에서의 효율성을 크게 향상
 
 ### 빅데이터 분석 플랫폼 (레거시) 유지보수 (21.01.01 ~ 현재, 2년 4개월)
-> python & flask, spark, pyspark, sqlAlchemy, redis, memcached, mariadb, postgresql, redis, tibero,
-> oracle, altibase, minio, hdfs, 자체DB, Yacc, Lex, jenkins, swagger, sonarqube, git, mattermost,
-> jira
 
-- 개발 참여인원 : 3명
-- spark 를 통한 빅데이터 분석 서비스
-- 쿼리 토큰화 및 파싱, 암호화(RSA) 처리
-- 기존 spark 의 기본적인 conf 를 이용 -> 빅데이터 분석에 이용되는 conf 세팅 완료
-- spark job 로그 세팅 (쿼리를 통해 로그 분석 가능하도록 세팅)
-- spark cluster 서버 이전 (1G -> 10G, 소프트웨어적인 부분 담당)
-- yacc(parser), lex(tokenizer) 를 통한 DSL 개발
-- pyspark udf 개발
-- 대용량 데이터 partitioning 처리 (동작되지않는 slow query 1초 내로 출력되도록 개선)
-- jenkins 를 통한 ci/cd 진행
-- release 버전 외부 업체 배포 완료
+| Skill           |                                                                                    |
+|:----------------|:-----------------------------------------------------------------------------------|
+| 프로그래밍 언어 및 툴    | Python, Flask, Spark, PySpark, SQLalchemy, Yacc, Lex, SQLalchemy                   |
+| 데이터베이스          | MariaDB, PostgreSQL, Tibero, Oracle, Altibase, Minio, HDFS, 자체DB, Redis, Memcached |
+| 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)                                                           |
+| CI/CD           | Jenkins                                                                            |
+| 버전 관리 및 협업 도구   | Git, Swagger, SonarQube, Mattermost, Jira                                          |
+{:.stretch-table}
+
+- 개발 참여인원: 3명
+- 고성능 빅데이터 분석 서비스를 위한 Spark 활용
+- 쿼리 토큰화, 파싱 및 암호화(RSA) 처리 최적화
+- Spark의 고성능 분석을 위한 최적화된 conf 설정 구축
+- 로그 분석 용이성을 위한 Spark job 로그 세팅
+- Spark 클러스터 서버 업그레이드 (1G -> 10G, 소프트웨어적 부분 담당)
+- yacc(parser), lex(tokenizer)를 이용한 효율적인 DSL 개발
+- 고성능 Pyspark UDF 개발
+- 대용량 데이터 처리를 위한 파티셔닝 최적화 (느린 쿼리를 1초 내로 개선)
+- Jenkins를 통한 빠른 CI/CD 진행
+- 외부 업체에 성능 향상된 릴리즈 버전 배포 완료
 
 [담당 역할]
 - 설계, 개발
 
 [성과 및 배운점]
-- 레거시 프로그램의 conf 수정만으로도 기존 성능대비 2배 이상의 성능 및 속도 향상
-- 레거시 프로그램에 대한 이해와 레거시 프로그램에 접근해야하는 방식 이해
-- 다수의 개발자가 동시에 개발하는 서비스에서 사용되는 gitflow 를 경험함으로 인해 협업에 대해 충분히 숙지 
-- spark 에 대한 개념 이해 및 데이터 분석에 이용되는 툴에 대한 이해
-- DB 에서 사용되는 쿼리의 구조 및 파싱에 대한 이해와 스스로 구현이 가능
+- 레거시 프로그램의 구성을 수정하여 기존 성능 대비 2배 이상의 성능 및 속도 향상
+- 레거시 프로그램에 대한 깊이 있는 이해와 그에 접근하는 방법을 습득
+- 다양한 개발자들과 함께 작업하는 프로젝트에서 GitFlow를 사용한 경험을 통해 팀 협업에 대한 충분한 지식을 습득
+- Spark와 같은 데이터 분석 도구에 대한 개념을 이해하고, 데이터 분석에 필요한 다양한 도구를 활용할 수 있는 역량을 습득
+- 데이터베이스에서 사용되는 쿼리의 구조 및 파싱에 대한 이해를 바탕으로, 독립적으로 쿼리를 구현할 수 있는 능력 습득
 
 
 ### 메타데이터 관리 서비스 개선 (23.01.01 ~ 23.03.31, 3개월)
-> Java & Spirng & Jpa, Flyway, mariaDB, docker, k8s, jenkins, sonarqube, git, jira
 
-- 개발 참여인원 : 2명
-- spring datasource 기반 에서 db 형상관리 flyway 로 마이그레션 (db history 구축)
-- JPA 기반 기존 대비 성능 향상 (data 로딩 개선, load 시간 단축)
-- jenkins 를 통한 ci/cd 진행
-- release 버전 외부 업체 배포 완료
+| Skill           |                                       |
+|:----------------|:--------------------------------------|
+| 프로그래밍 언어 및 툴    | Java, Spring, JPA, Flyway, SQLalchemy |
+| 데이터베이스          | MariaDB, Redis, Memcached                             |
+| 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)              |
+| CI/CD           | Jenkins, SonarQube                    |
+| 버전 관리 및 협업 도구   | Git, Jira                             |
+{:.stretch-table}
+
+
+- 개발 참여인원: 2명
+- Spring Datasource에서 Flyway를 이용한 DB 형상관리로 마이그레이션 (DB 히스토리 구축)
+- JPA 기반 성능 향상으로 데이터 로딩 개선 및 로드 시간 단축
+- Jenkins를 활용한 빠른 CI/CD 진행
+- 성능 개선된 릴리즈 버전 외부 업체 배포 완료
 
 [담당 역할]
 - 기획, 설계, 개발
 
 [성과 및 배운점]
-- 기존 metadata 를 조회시 모든 데이터를 분석후 fetch 해오는 형식에서 특정 metadata 만 fetch 하는 방식 채택
-  (기존 성능 1초내외 -> 0.01초 수준으로 향상)
-- 다른 개발자가 만든 코드를 성능향상에 포커스를 두어 리뷰함으로 인해 현재 내가 알고 있는 지식으로 이 프로그램이 
-  현 상황에 맞게 개발되어있는지 선택과 집중을 하는 시간을 가지게 되었다
+- 메타데이터 조회 과정을 개선하여, 전체 데이터 분석 후 가져오는 방식에서 특정 메타데이터만 가져오는 방식을 채택하여 성능을 1초에서 0.01초 수준으로 향상
+- 다른 개발자가 작성한 코드에 성능 향상을 중점으로 리뷰함으로써, 현재 보유한 지식을 활용하여 프로그램이 현 상황에 적합한지 판단하고, 필요한 부분에 집중할 수 있는 시간을 가짐
 
 ### 웹 기반 데이터 분석 플랫폼 개발 (22.07.01 ~ 22.12.31, 6개월)
-> Java & Spring & Jpa, Python & FastApi, Mariadb, flyway, sqlAlchemy, pandas, mecab, 
-> textrank, docker, k8s, jenkins, swagger, git, jira
 
-- 개발 참여인원 : 1명
-- EDA(Exploratory Data Analysis) 시각화 데이터 추출
-- NLP(Natural language processing) 분석 추출
-- GEO 폴리곤 추출
-- 로드 밸런싱 구조 적용
-- jenkins 를 통한 ci 진행
-- release 버전 외부 업체 배포 완료
+| Skill           |                                                                                  |
+|:----------------|:---------------------------------------------------------------------------------|
+| 프로그래밍 언어 및 툴    | Java, Spring, JPA, Python, FastAPI, Pandas, Mecab, TextRank, Flyway, SQLAlchemy  |
+| 데이터베이스          | MariaDB                                                                          |
+| 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)                                                         |
+| CI/CD           | Jenkins, Swagger, SonarQube                                                      |
+| 버전 관리 및 협업 도구   | Git, Jira                                                                        |
+{:.stretch-table}
+
+- 개발 참여인원: 1명
+- 탐색적 데이터 분석(EDA)을 통한 시각화 데이터 추출 및 성능 향상
+- 자연어 처리(NLP)를 이용한 분석 데이터 추출과 최적화
+- GEO 폴리곤 데이터 추출 및 처리 성능 개선
+- 로드 밸런싱 구조 적용으로 서비스 안정성 향상
+- Jenkins를 활용한 빠른 CI 진행
+- 성능 개선된 릴리즈 버전 외부 업체 배포 완료
 
 [담당 역할]
 - 기획, 설계, 개발
 
 [성과 및 배운점]
-- 다수의 사용자가 하나의 서비스에 붙어 과부화되는 서버를 분할 함으로 인해 트래픽과 분석데이터의 사이즈가 늘어나도 
-  대용량의 데이터를 분석 가능
-- 무언가를 개발함에 있어 언어도 그저 툴이다
-- 로드 밸런싱을 구현함으로써 기존 서비스 하나만으로 구현하던 것을 여러개의 서비스로 분할 하니 동기화 문제 등 
-  그 안에서 또 다른 이슈가 발생할 수 있다
+- 다수의 사용자가 하나의 서비스에 접속해 서버 과부하가 발생하는 문제를 해결하기 위해 서버를 분할 
+  이를 통해 트래픽과 분석 데이터의 크기가 증가해도 대용량 데이터 분석이 가능
+- 개발 과정에서 언어는 단순한 도구임을 깨달음
+- 로드 밸런싱을 구현해 기존 하나의 서비스를 여러 개의 서비스로 분할함으로써, 동기화 문제 등 새로운 이슈가 발생할 수 있다는 것을 인식
 
 ### slow 쿼리 캐시서버 개발 (21.06.01~21.12.31, 6개월)
-> Python & FastApi, sqlAlchemy, Mariadb, Yacc, Lex, docker, k8s, jenkins, swagger, sonarqube, 
-> git, jira
 
-- 개발 참여인원 : 1명
-- 쿼리 토큰화 및 파싱, 암호화(RSA) 처리
-- 본 분석플랫폼의 slow 쿼리 자체 파악 후 캐시화
-- 기존 10초 내외의 response time 에서 1초 내외의 response time 으로 개선
-- jenkins 를 통한 ci/cd 진행
-- 확연한 성능 향상으로 인해 메인 프로젝트로 진행화 (타 개발자 진행)
+| Skill            |                                                                 |
+|:-----------------|:----------------------------------------------------------------|
+| 프로그래밍 언어 및 프레임워크 | Python, FastAPI, Yacc, Lex, Pandas, Mecab, TextRank, SQLAlchemy |
+| 데이터베이스           | MariaDB                                                         |
+| 컨테이너화 및 오케스트레이션  | Docker, Kubernetes (k8s)                                        |
+| CI/CD            | Jenkins, Swagger, SonarQube                                     |
+| 버전 관리 및 협업 도구    | Git, Jira                                                       |
+{:.stretch-table}
+
+- 개발 참여인원: 1명
+- 쿼리 토큰화, 파싱 및 RSA 암호화 처리를 통한 성능 최적화
+- 분석 플랫폼 내의 느린 쿼리 파악 후 캐싱 적용으로 성능 개선
+- 응답 시간이 기존 10초에서 1초로 크게 단축된 성능 향상
+- Jenkins를 이용한 빠른 CI/CD 진행
+- 뚜렷한 성능 향상 덕분에 메인 프로젝트로 승격 및 진행 (다른 프로젝트로 인해 승격 프로젝트는 미진행)
 
 [담당 역할]
 - 기획, 설계, 개발
 
 [성과 및 배운점]
-- DB 에서 데이터를 불러오고 전달하는데만 해도 수십초 걸리던 무거운 데이터를 단순히 캐시 서버를 둠으로써 1초 내외로 
-처리 가능할 수 있게 되었다 
-- 데이터를 serving 함에 있어 빠르게 처리하고 전달하는 것만이 정답이 아닌 중간에 매개체를 둠으로써 복잡한 것 보단
-떄로는 단숨함이 해결책이 될 수 있다
+- DB에서 데이터를 가져오고 전달하는 데 수십 초 소요되던 무거운 데이터를 캐시 서버를 활용하여 1초 이내로 처리할 수 있게 됨
+- 데이터 서빙 시 빠른 처리와 전달만이 해결책이 아니라, 중간에 매개체를 도입함으로써 복잡함 대신 때로는 간결함이 효과적인 해결 방법이 될 수 있다는 것을 깨달음
 
 ---
 ## Mobigen (intern)
@@ -160,15 +198,17 @@ permalink: /about/
 {:.stretch-table}
 
 ### 자체 DSL 및 spark 기반 데이터 분석프로그램 분석 & 개발 (20.07.01 ~ 20.12.31, 6개월)
-- 회사 내부의 핵심 프로그램 코드 분석, QA 진행
-- 프로그램의 동작 이해 후 필요한 추가 DSL 개발 및 테스트코드 작성
-- 인턴 종료 1개월전 개발한 프로그램 배포 & 릴리즈
+- 핵심 프로그램의 코드 분석과 성능 중심의 QA 진행
+- 프로그램 동작 이해 후, 성능 향상을 위한 추가 DSL 개발 및 테스트 코드 작성
+- 인턴 기간 종료 1개월 전에 성능 최적화된 프로그램을 배포하고 릴리즈 완료
 
 [담당 역할]
 - 기획, 설계, 개발, QA
 
 ---
-## 한양대 (erica)
+## 학력
+
+### 한양대 (erica)
 
 | period | 19.03 ~ 21.02 |
 |:-------|:--------------|
@@ -177,7 +217,14 @@ permalink: /about/
 | 졸업상태   | 졸업 / 편입       |
 {:.stretch-table}
 
+---
+## 자격증
 
+### AWS Certified Developer Associate
 
-
+| 취득일   | 23.01.20   |
+|:------|:-----------|
+| 제공사   | AWS        |
+| 성적    | 724 / 1000 |
+{:.stretch-table}
 
