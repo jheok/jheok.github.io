@@ -14,19 +14,7 @@ permalink: /about/
 | blog   | [jheok.github.io](https://jheok.github.io/about/)                          |
 
 ---
-# Work Experience
-
-## Mobigen (full-time employee)
-> 웹 기반 빅데이터 분석 플랫폼 서비스
-
-| period   | 21.01.01 ~ 현재 (2년 4개월) |
-|:---------|:-----------------------|
-| position | Python, Java 백엔드 엔지니어  |
-| project  | 웹 백엔드 기반 데이터 분석 플랫폼 개발 |
-{:.stretch-table}
-
-
-## Experienced Skill
+# Experienced Skill
 > 현재까지 제가 경험하고 접했던 기술들 입니다
 
 | Skill           |                                                                                    |
@@ -50,6 +38,17 @@ permalink: /about/
 | CI/CD 언어        | Declarative pipeline, Scripted pipeline                                            |
 {:.stretch-table}
 
+---
+# Work Experience
+
+## Mobigen (full-time employee)
+> 웹 기반 빅데이터 분석 플랫폼 서비스
+
+| period   | 21.01.01 ~ 현재 (2년 4개월) |
+|:---------|:-----------------------|
+| position | Python, Java 백엔드 엔지니어  |
+| project  | 웹 백엔드 기반 데이터 분석 플랫폼 개발 |
+{:.stretch-table}
 
 ### CI/CD 강화 (23.04.01 ~ , 현재)
 
