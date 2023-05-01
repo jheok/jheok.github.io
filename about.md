@@ -20,19 +20,19 @@ permalink: /about/
 | Skill           |                                                                                    |
 |:----------------|:-----------------------------------------------------------------------------------|
 | 프로그래밍 언어        | Java, Python, Groovy                                                               |
-| 분산처리 엔진         | Spark                                                                              |
-| 데이터 분석 툴        | Pandas, Polars, Pyspark, Apache Sedona(geoSpark)                                   |
-| 형태소 분석 툴        | TextRank, Mecab                                                                    |
-| 프로토콜            | Http, Https, Grpc                                                                  |
-| 파싱 툴            | Yacc, Lex                                                                          |
-| DB 형상관리 툴       | Flyway, alembic                                                                    |
 | 프레임워크           | FastAPI, Flask, Spring                                                             |
+| 프로토콜            | Http, Https, Grpc                                                                  |
 | ORM 프레임워크       | JPA, SQLAlchemy                                                                    |
 | 데이터베이스          | MariaDB, PostgreSQL, Redis, Memcached, Tibero, Oracle, Altibase, Minio, HDFS, 자체DB |
-| 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)                                                           |
+| DB 형상관리 툴       | Flyway, alembic                                                                    |
+| 분산처리 엔진         | Spark                                                                              |
+| 데이터 분석 툴        | Pandas, Polars, Pyspark, Apache Sedona(geoSpark)                                   |
+| 자연어 분석 툴        | TextRank, Mecab                                                                    |
+| 파싱 툴            | Yacc, Lex                                                                          |
 | CI/CD           | Jenkins, ArgoCD                                                                    |
-| 코드 분석 툴         | Sonarqube, flake8                                                                  |
 | 테스트 툴           | doctest, junit5, unittest                                                          |
+| 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)                                                           |
+| 코드 분석 툴         | Sonarqube, flake8                                                                  |
 | 에러 트래킹          | Sentry                                                                             |
 | 버전 관리 및 협업 도구   | GitHub, GitLab, Jira, Swagger, Mattermost, Slack                                   |
 | CI/CD 언어        | Declarative pipeline, Scripted pipeline                                            |
