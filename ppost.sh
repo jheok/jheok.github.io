@@ -82,4 +82,7 @@ categories: ${category}
 tag: [${tag}]
 ---
 
+# ${title}
+
+
 " > $pwd/_posts/$category/_posts/"$date-$title".md
