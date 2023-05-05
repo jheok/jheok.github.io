@@ -33,7 +33,7 @@ ApplicationContext 은 부가기능을 제공한다.
 - 편리한 리소스 조회 (ResouceLoader)
   - 파일, 클래스패스, 외부 등에서 리소스를 편리하게 조회
 
-| ![Image Alt 텍스트]({{"/assets/img/java/23-04-30.PNG" | relative_url}}) |
+| ![Image Alt 텍스트]({{"/assets/img/java/23-04-30/23-04-30.PNG" | relative_url}}) |
 |:--------------------------------------------------:|
 |                          BeanFactory와 ApplicationContext                          |
 
