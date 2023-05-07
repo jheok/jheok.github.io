@@ -8,6 +8,8 @@ tag: [web, servlet]
 
 # Forward vs Redirect
 
+현재 작업중인 페이지에서 다른 페이지로 이동하는 방식에는 forward 방식과 redirect 방식이 존재한다
+
 ## Forward
 
 | ![사진]({{"/assets/img/tech/23-05-06/forward.png" | relative_url}}) |
