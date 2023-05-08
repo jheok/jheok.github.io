@@ -170,7 +170,7 @@ permalink: /about/
 | 자연어 분석 툴        | TextRank, Mecab                                                                    |
 | 파싱 툴            | Yacc, Lex                                                                          |
 | CI/CD           | Jenkins, ArgoCD                                                                    |
-| 테스트 툴           | doctest, junit5, unittest                                                          |
+| 테스트 툴           | doctest, junit5, unittest, ngrinder                                                |
 | 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)                                                           |
 | 코드 분석 툴         | Sonarqube, flake8                                                                  |
 | 에러 트래킹          | Sentry                                                                             |
