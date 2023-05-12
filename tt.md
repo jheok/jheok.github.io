@@ -242,6 +242,44 @@ spark 가 inmemory 방식으로 동작한다 하여도 많은 디스크 IO가 �
 
 
 #### 결론
-
+- 활용 기술, 본인의 역할, 진행 방식, 문제 해결 경험
 - 아예 동작하지 않던 대용량 분석 DSL 쿼리 -> 1~2 초 대의 DSL 쿼리 로 개선
 - 이후 프론트 팀에서 Map 관련 명령어를 이용한 팀 구축
+
+
+---
+파일 기반 데이터 분석 플랫폼 개발
+활용 언어 및 툴: Java(Spring, JPA, Maven, Flyway, Junit5), Python(FastAPI, SQLAlchemy, Pandas, TextRank, Mecab, unittest, flake8) 
+Http, MariaDB, Jenkins, ngrinder, Docker, k8s, GitHub, Jira, Swagger
+
+당시 화면 기획부터 설계, 개발 까지 하나의 프로젝트 내에서 2개의 서비스를 6개월에 걸쳐 담당하였다.
+
+프로젝트의 주된 내용은 분산 코드 실행 및 관리 서비스 개발이다.
+
+AMS(Java) - AES(Python) - Task(언어 무관)
+서비스에는 Agent Executor Service(AES) 와 Agent Manager Service(AMS) 가 있으며
+AES 는 분석 api 를 request 받으면 subProcess 를 생성하여 분석을 시작하는데 이때 subProcess 는 Task 라는 개념으로 사용된다
+AMS 는 AES와 AES에서 생성된 Task 를 Monitoring 하며 관리한다
+
+사용자는 AMS 를 통해 remote 서버에서 돌고있는 AES에 데이터 분석 프로그램을 등록할 수 있고 api 를 통해 등록된 코드로 분석을 실행할 수 있으며
+결과를 저장해놓거나 바로 결과를 받을수 있다
+
+AMS 는 k8s 의 pod 을 관리하는 서비스에 연동해 AES 의 스케줄링이 가능하고 실행중인 AES 와 Task 를 모니터링 할 수 있다
+
+---
+sql+dsl 기반 데이터 분석 플랫폼 개발
+활용 언어 및 툴: Python(FastAPI, SQLAlchemy, alembic, Yacc, Lex, Pandas, Polars, Mecab, doctest, unittest, flake8)
+Http, Https, Grpc, MariaDB, PostgreSQL, Redis, Tibero, Oracle, Minio, HDFS, 자체DB
+Jenkins(Declarative pipeline, Scripted pipeline), ArgoCD, Sonarqube, ngrinder, Sentry
+Docker, k8s, GitHub, GitLab, Jira, Swagger, Slack
+
+DSMS 의 연결정보를 이용해서 SQL 쿼리를 사용하고 싶다. + SQL 쿼리를 통해서 조회한 데이터에 DSL 명령어를 사용하고 싶다.
+SQL
+mariadb
+postsresql
+oracle
+mysql
+minio/HDFS
+excel/csv
+처리하는 데이터 양이 적기 때문에, spark 대신 pandas/polars 를 이용하여 (처리 속도가) 빠르게 처리하고 싶다.
+동시에 여러 쿼리를 빠르게 처리하고 싶다. ← (기존 앙고라는 중앙집중 처리방식으로 많은 쿼리가 동시에 들어올 때 처리가 느려지는 일이 발생한다.)
