@@ -266,6 +266,9 @@ AMS 는 AES와 AES에서 생성된 Task 를 Monitoring 하며 관리한다
 
 AMS 는 k8s 의 pod 을 관리하는 서비스에 연동해 AES 의 스케줄링이 가능하고 실행중인 AES 와 Task 를 모니터링 할 수 있다
 
+이 프로젝트를 하면서 가장 기억에 남았던 문제는 파일을 기반으로 서비스가 동작을 하다보니 동시성 문제가 가장 기억에 남았다
+
+
 ---
 sql+dsl 기반 데이터 분석 플랫폼 개발
 활용 언어 및 툴: Python(FastAPI, SQLAlchemy, alembic, Yacc, Lex, Pandas, Polars, Mecab, doctest, unittest, flake8)
