@@ -257,32 +257,83 @@ Http, MariaDB, Jenkins, ngrinder, Docker, k8s, GitHub, Jira, Swagger
 프로젝트의 주된 내용은 분산 코드 실행 및 관리 서비스 개발이다.
 
 AMS(Java) - AES(Python) - Task(언어 무관)
-서비스에는 Agent Executor Service(AES) 와 Agent Manager Service(AMS) 가 있으며
-AES 는 분석 api 를 request 받으면 subProcess 를 생성하여 분석을 시작하는데 이때 subProcess 는 Task 라는 개념으로 사용된다
+서비스에는 Agent Manager Service(AMS) 와 Agent Executor Service(AES) 가 있으며
 AMS 는 AES와 AES에서 생성된 Task 를 Monitoring 하며 관리한다
+AES 는 AMS 를 통해 api 를 request 받으면 subProcess 를 생성하여 분석을 시작하는데 이때 subProcess 는 Task 라는 개념으로 사용된다
+Task 는 사용자 혹은 개발자가 AES 에 등록한 프로그램을 실행한다
 
 사용자는 AMS 를 통해 remote 서버에서 돌고있는 AES에 데이터 분석 프로그램을 등록할 수 있고 api 를 통해 등록된 코드로 분석을 실행할 수 있으며
 결과를 저장해놓거나 바로 결과를 받을수 있다
 
 AMS 는 k8s 의 pod 을 관리하는 서비스에 연동해 AES 의 스케일링이 가능하고 실행중인 AES 와 Task 를 모니터링 할 수 있다
 
-이 프로젝트를 하면서 가장 기억에 남았던 문제는 파일을 기반으로 서비스가 동작을 하다보니 동시성 문제가 가장 기억에 남았다
+이 프로젝트를 하면서 초기에 AMS, AES 각 서비스마다 pod 을 하나씩 띄워서 개발을 하는동안 전혀 문제가 발생하기 않았는데 pod 을 관리하는 서비스에 연동시 AES 의 pod 이
+늘어남에 있어 하나의 file 에 여러개의 pod 이 동시에 붙으면서 문제가 발생했었다. 이를 해결하기 위해 Locking Mechanism 을 이용하였으며 이를 통해 여러개의 프로세스가 
+동시에 작업을 하여도 문제가 발생하던것을 해결할 수 있었다
+
+
+
+
+
+
+본인의 역할: 전체 시스템 기획부터 설계, 개발까지 담당, 이중 주요 서비스인 Agent Manager Service(AMS)와 Agent Executor Service(AES) 개발
+
+진행 방식: 6개월 동안 두 개의 서비스를 개발, AMS는 AES와 AES에서 생성된 Task(서브 프로세스)를 모니터링하며 관리하고, AES는 AMS로부터 API를 통해 요청을 받아
+Task(서브 프로세스)를 생성하여 데이터 분석 작업을 시작하는 구조를 개발. 또한, AMS를 k8s의 pod 관리 서비스에 연동하여 AES의 스케일링이 가능하도록 구현하였습니다
+
+문제 해결 경험: 프로젝트 초기에는 AMS와 AES가 각각 하나의 pod에서 작동하면서 문제가 없었지만, pod 관리 서비스에 연동한 후 AES pod가 늘어나면서 하나의 파일에 여러 pod가 동시에 접근하는 문제가 발생했습니다
+이를 해결하기 위해 Locking Mechanism을 도입하여, 여러 개의 프로세스가 동시에 작업을 수행하더라도 문제가 발생하지 않도록 개선했습니다
+
+
+[프로젝트 이름]
+파일 기반 데이터 분석 플랫폼 개발
+[활용 기술]
+Java(Spring, JPA, Maven, Flyway, Junit5), Python(FastAPI, SQLAlchemy, Pandas, TextRank, Mecab, unittest, flake8), 
+Http, MariaDB, Jenkins, ngrinder, Docker, k8s, GitHub, Jira, Swagger
+[본인의 역할]
+기획부터 설계, 개발까지의 담당했습니다. 프로젝트는 총 6개월(22.07.01 ~ 22.12.31) 동안 진행되었으며, 이 기간 동안 2개의 서비스를 개발했습니다
+[진행 방식]
+프로젝트의 주된 내용은 분산 코드 실행 및 관리 서비스 개발이었습니다. 이를 위해 Agent Manager Service(AMS)와 Agent Executor Service(AES)라는 두 개의 서비스를 개발했습니다
+AMS는 Java로 개발되었으며, AES와 AES에서 생성된 Task(subprocess)를 모니터링하고 관리하는 역할을 수행했습니다.
+AES는 Python으로 개발되었으며, AMS를 통해 API 요청을 받으면 Task(subprocess)를 생성하여 분석을 시작하였습니다.
+사용자는 AMS를 통해 원격 서버에서 동작 중인 AES에 데이터 분석 프로그램을 등록할 수 있었고, API를 통해 등록된 프로그램으로 분석을 실행할 수 있었습니다. 그리고 그 결과를 저장하거나 바로 받을 수 있었습니다.
+AMS는 k8s의 pod를 관리하는 서비스와 연동되어 AES의 스케일링이 가능하도록 하였고, 실행 중인 AES와 Task(subprocess)를 모니터링 할 수 있었습니다.
+[문제 해결 경험]
+프로젝트를 진행하면서 가장 기억에 남았던 문제는 동시성 문제였습니다. 초기에는 AMS와 AES, 각각의 서비스마다 pod을 하나씩 구동하면서 개발을 진행하였습니다. 이 때에는 동시성 문제가 발생하지 않았습니다.
+그러나 프로젝트가 진행되면서 pod 관리를 자동화하는 단계로 넘어갔을 때 문제가 발생하였습니다. Kubernetes의 자동 스케일링 기능에 의해 AES의 pod 개수가 증가함에 따라, 여러 개의 pod이 동일한 파일에 동시에 액세스하는 상황이 발생하였습니다.
+이러한 동시성 문제를 해결하기 위해 락(Locking Mechanism)을 도입하였습니다. 락을 이용하면 여러 개의 프로세스가 동시에 같은 자원에 접근하려고 할 때, 한 번에 하나의 프로세스만 접근할 수 있도록 제어할 수 있습니다. 
+이 방법을 통해 동시성 문제를 해결했었습니다
+이 경험을 통해 분산 시스템에서 동시성 문제는 불가피하며, 이를 처리하는 방법을 알아야 한다는 것을 깨달았습니다. 특히, Locking Mechanism을 적용하면서 동시성 제어의 중요성을 체감했습니다.
 
 
 ---
-sql+dsl 기반 데이터 분석 플랫폼 개발
-활용 언어 및 툴: Python(FastAPI, SQLAlchemy, alembic, Yacc, Lex, Pandas, Polars, Mecab, doctest, unittest, flake8)
-Http, Https, Grpc, MariaDB, PostgreSQL, Redis, Tibero, Oracle, Minio, HDFS, 자체DB
-Jenkins(Declarative pipeline, Scripted pipeline), ArgoCD, Sonarqube, ngrinder, Sentry
-Docker, k8s, GitHub, GitLab, Jira, Swagger, Slack
 
-DSMS 의 연결정보를 이용해서 SQL 쿼리를 사용하고 싶다. + SQL 쿼리를 통해서 조회한 데이터에 DSL 명령어를 사용하고 싶다.
-SQL
-mariadb
-postsresql
-oracle
-mysql
-minio/HDFS
-excel/csv
-처리하는 데이터 양이 적기 때문에, spark 대신 pandas/polars 를 이용하여 (처리 속도가) 빠르게 처리하고 싶다.
-동시에 여러 쿼리를 빠르게 처리하고 싶다. ← (기존 앙고라는 중앙집중 처리방식으로 많은 쿼리가 동시에 들어올 때 처리가 느려지는 일이 발생한다.)
+
+[프로젝트 이름]
+sql+dsl 기반 데이터 분석 플랫폼 개발
+[활용기술]
+Python(FastAPI, SQLAlchemy, alembic, Yacc, Lex, Pandas, Polars, Mecab, doctest, unittest, flake8), Http, Https, Grpc, 
+MariaDB, PostgreSQL, Redis, Tibero, Oracle, Minio, HDFS, 자체DB, Jenkins(Declarative pipeline, Scripted pipeline), 
+ArgoCD, Sonarqube, ngrinder, Sentry, Docker, k8s, GitHub, GitLab, Jira, Swagger, Slack
+[본인의 역할]
+기획부터 설계, 개발까지의 담당했습니다. 프로젝트는 총 6개월 간의 개발 이후 현재까지 개선 및 유지보수 중입니다 (21.11.01 ~ 현재)
+[진행 방식]
+프로젝트의 주된 내용은 SQL+DSL 기반의 데이터 분석 서비스 개발이었습니다. 이전에는 Python과 Spark를 기반으로 한 DSL 기반 데이터 분석 플랫폼을 유지보수하고 있었으나,
+중앙집중 처리 방식 때문에 많은 쿼리가 동시에 들어올 때 처리 속도가 느려지는 문제가 있었습니다. 그리고 서비스의 타겟이 빅데이터였지만, 실제로는 그에 맞지 않는 작은 규모의 데이터를 주로 다루고 있었으며
+사용자들은 이를 회피하기 위해 db에 직접 연동하는 서비스를 주로 사용하였으며 sql 을 사용하고 있었습니다.
+이를 보완하기 위해, 기존의 프로젝트를 하위호환 가능한 SQL+DSL 형태의 구조로 변경하기로 결정했습니다. 성능 향상을 위해 pandas, polars, dask, modin의 성능을 비교 분석하였고,
+이 중 polars가 가장 성능이 좋았습니다. 또한 개발 친화적이기 위해 polars+pandas 형태의 데이터 분석 플랫폼 구조를 채택하였습니다.
+
+[문제 해결 경험]
+프로젝트를 진행하면서 동시에 여러 SQL+DSL 쿼리가 서비스에 도착하면 성능 저하가 발생하는 문제를 발견하였습니다. 
+이를 ngrinder를 이용하여 재현하였고, Python의 GIL 때문에 성능이 저하되는 것으로 판단하였습니다.
+이 문제를 해결하기 위해, 원래 하나의 프로세스로 운영되던 서비스를 5개의 다른 프로세스로 분리하여 성능 향상을 이루었습니다.
+1. 메인 서버 (Main Server): API 요청을 처리하고 전반적인 서비스 관리를 담당합니다
+2. PreFork 서버 (PreFork Server): subprocess를 미리 fork 하여 db와 connection 을 미리 맺어놓고 SQL 쿼리를 처리합니다
+3. Fork 서버 (Fork Server): SQL+DSL 쿼리가 들어올 때마다 subprocess를 fork하며, 쿼리 처리 작업의 부하를 줄였습니다
+4. 모니터링 서버 (Monitoring Server): 각 subprocess의 상태를 모니터링하며, 특히 zombie process에 대한 관리를 철저히 하였습니다
+5. 로그 서버 (Log Server): 각 프로세스에서 발생하는 로그를 관리하고 분석합니다
+이러한 변경을 통해, 각 프로세스는 자신의 역할에 집중하고, 병목 현상을 최소화하여 성능을 향상을 하였습니다
+추가로, ngrinder를 이용하여 성능 테스트를 수행하고, 이를 기반으로 서비스의 성능 개선을 지속적으로 모니터링하였습니다. 이 결과, 원래 2초가 걸리던 쿼리 처리 시간을 1초 이하로 줄여, 성능을 2배 이상 향상시킬 수 있었습니다.
+이 경험을 통해, 성능 문제에 직면했을 때 시스템을 세분화하고, 특정 부분에 집중하여 문제를 해결하는 방법에 대해 배울 수 있었습니다. 또한 성능 개선에 있어 지속적인 모니터링과 테스트의 중요성을 다시 한 번 인지하게 되었습니다.
+
