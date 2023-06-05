@@ -51,7 +51,7 @@ http://localhost:8080/api/members/bad 라고 호출하면 IllegalArgumentExcepti
 
 ### ExceptionResolver 적용 전
 
-| ![사진]({{"/assets/img/tech/23-05-29/적용전.png" | relative_url}}) |
+| ![사진]({{"/assets/img/java/23-05-29/적용전.png" | relative_url}}) |
 |:--------------------------------------------------:|
 |                          ExceptionResolver 적용 전                          |
 
@@ -61,7 +61,7 @@ http://localhost:8080/api/members/bad 라고 호출하면 IllegalArgumentExcepti
 
 interceptor 참고
 
-| ![사진]({{"/assets/img/tech/23-05-29/적용후.png" | relative_url}}) |
+| ![사진]({{"/assets/img/java/23-05-29/적용후.png" | relative_url}}) |
 |:--------------------------------------------------:|
 |                          ExceptionResolver 적용 후                          |
 
