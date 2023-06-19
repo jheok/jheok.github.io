@@ -29,6 +29,7 @@ permalink: /about/
 ### Data Fabric 플랫폼 개발 (23.06.01 ~ 현재, 1개월)
 
 - 제안서를 통한 기획 준비 상태
+- DDD 를 도입한 설계 준비
 
 **[담당 역할]**
 - 기획
@@ -38,6 +39,7 @@ permalink: /about/
 
 - 개발언어 : Python(FastApi, SQLAlchemy)
 - 개발 참여인원: 2명
+- Http, Https 뿐만 아닌 Grpc 를 이용한 프로토콜 도입
 - 쿼리 토큰화, 파싱 및 RSA 암호화를 통한 데이터 보안 강화
 - Pandas 와 Polars 결합으로 데이터 분석 성능 및 처리 속도 개선
 - python GIL 로 인한 성능저하의 문제를 MSA 도입으로 개선
@@ -83,6 +85,7 @@ permalink: /about/
 
 - 개발언어 : Python(flask, SQLAlchemy)
 - 개발 참여인원: 3명
+- Http, Https 뿐만 아닌 Grpc 를 이용한 프로토콜 도입
 - 고성능 빅데이터 분석 서비스를 위한 Spark 활용
 - 쿼리 토큰화, 파싱 및 암호화(RSA) 처리 최적화
 - Spark 의 고성능 분석을 위한 최적화된 conf 설정 구축
@@ -126,7 +129,7 @@ permalink: /about/
 ### CI/CD 강화 (23.04.01 ~ 23.05.31, 2개월)
 
 - 개발 참여인원: 4명
-- GitLab, Jenkins, ArgoCD를 활용한 고성능 CI/CD 구축 (Jenkins 통합화 및 GitLab 모듈화 기여)
+- GitHub, GitLab, Jenkins, ArgoCD를 활용한 고성능 CI/CD 구축 (Jenkins 통합화 및 GitLab 모듈화 기여)
 - 효율적인 리소스 활용을 위한 통합 Jenkinsfile 구축 (모든 repo 에서 하나의 Jenkinsfile 로 통합)
 - Jenkins, SonarQube, Slack 연동을 통한 일일 빌드 결과 및 성능 분석 보고 개선
 
@@ -177,6 +180,7 @@ permalink: /about/
 
 - 개발언어 : Java(Spring, JPA), Python(FastApi, SQLAlchemy)
 - 개발 참여인원: 1명
+- Http, Https 뿐만 아닌 Grpc 를 이용한 프로토콜 도입 
 - 탐색적 데이터 분석(EDA)을 통한 시각화 데이터 추출 및 성능 향상
 - 자연어 처리(NLP)를 이용한 분석 데이터 추출과 최적화
 - GEO 폴리곤 데이터 추출 및 처리 성능 개선
