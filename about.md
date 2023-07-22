@@ -19,23 +19,23 @@ permalink: /about/
 ## Mobigen (full-time employee)
 > 웹 기반 빅데이터 분석 플랫폼 서비스
 
-| period   | 21.01.01 ~ 현재 (2년 6개월) |
+| period   | 21.01.01 ~ 현재 (2년 7개월) |
 |:---------|:-----------------------|
 | position | Python, Java 백엔드 엔지니어  |
 | project  | 웹 백엔드 기반 데이터 분석 플랫폼 개발 |
 {:.stretch-table}
 
 
-### Data Fabric 플랫폼 개발 (23.06.01 ~ 현재, 1개월)
+### Data Fabric 플랫폼 개발 (23.06.01 ~ 현재, 2개월)
 
 - 제안서를 통한 기획 준비 상태
-- DDD 를 도입한 설계 준비
+- Dcat 을 기반으로한 테이블 기획
 
 **[담당 역할]**
 - 기획
 
 
-### sql+dsl 기반 데이터(polars+pandas) 분석 플랫폼 개발 (21.11.01 ~ 현재, 1년 8개월, GS 인증 진행중)
+### sql+dsl 기반 데이터(polars+pandas) 분석 플랫폼 개발 (21.11.01 ~ 현재, 1년 9개월, GS 인증 진행중)
 
 - 개발언어 : Python(FastApi, SQLAlchemy)
 - 개발 참여인원: 2명
@@ -239,25 +239,25 @@ AES는 Python으로 개발되었으며, AMS를 통해 API 요청을 받으면 Ta
 # Experienced Skill
 > 현재까지 제가 경험하고 접했던 기술들 입니다, 학부 과정에서의 경험은 포함하지 않았습니다
 
-| Skill           |                                                                                    |
-|:----------------|:-----------------------------------------------------------------------------------|
-| 프로그래밍 언어        | Java, Python, Groovy                                                               |
-| 프레임워크           | FastAPI, Flask, Spring                                                             |
-| 프로토콜            | Http, Https, Grpc                                                                  |
-| ORM 프레임워크       | JPA, SQLAlchemy                                                                    |
-| 데이터베이스          | MariaDB, PostgreSQL, Redis, Memcached, Tibero, Oracle, Altibase, Minio, HDFS, 자체DB |
-| DB 형상관리 툴       | Flyway, alembic                                                                    |
-| 분산처리 엔진         | Spark                                                                              |
-| 데이터 분석 툴        | Pandas, Polars, Pyspark, Apache Sedona(geoSpark)                                   |
-| 자연어 분석 툴        | TextRank, Mecab                                                                    |
-| 파싱 툴            | Yacc, Lex                                                                          |
-| CI/CD           | Jenkins, ArgoCD                                                                    |
-| 테스트 툴           | doctest, junit5, unittest, ngrinder                                                |
-| 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)                                                           |
-| 코드 분석 툴         | Sonarqube, flake8                                                                  |
-| 에러 트래킹          | Sentry                                                                             |
-| 버전 관리 및 협업 도구   | GitHub, GitLab, Jira, Swagger, Mattermost, Slack                                   |
-| CI/CD 언어        | Declarative pipeline, Scripted pipeline                                            |
+| Skill           |                                                                 |
+|:----------------|:----------------------------------------------------------------|
+| 프로그래밍 언어        | Java, Python, Groovy                                            |
+| 프레임워크           | FastAPI, Flask, Spring                                          |
+| 프로토콜            | Http, Https, Grpc                                               |
+| ORM 프레임워크       | JPA, SQLAlchemy                                                 |
+| 데이터베이스          | MariaDB, Mysql, PostgreSQL, Redis, Memcached, Minio, HDFS, 자체DB |
+| DB 형상관리 툴       | Flyway, alembic                                                 |
+| 분산처리 엔진         | Spark                                                           |
+| 데이터 분석 툴        | Pandas, Polars, Pyspark, Apache Sedona(geoSpark)                |
+| 자연어 분석 툴        | TextRank, Mecab                                                 |
+| 파싱 툴            | Yacc, Lex                                                       |
+| CI/CD           | Jenkins, ArgoCD                                                 |
+| 테스트 툴           | doctest, junit5, unittest, ngrinder                             |
+| 컨테이너화 및 오케스트레이션 | Docker, Kubernetes (k8s)                                        |
+| 코드 분석 툴         | Sonarqube, flake8                                               |
+| 에러 트래킹          | Sentry                                                          |
+| 버전 관리 및 협업 도구   | GitHub, GitLab, Jira, Swagger, Mattermost, Slack                |
+| CI/CD 언어        | Declarative pipeline, Scripted pipeline                         |
 {:.stretch-table}
 
 ---
