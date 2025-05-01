@@ -4,7 +4,11 @@
     "contact": {
         "phone": "010-9689-7969",
         "email": "cfd0318@naver.com",
-        "website": "kshell.tistory.com"
+        "website": {
+            "name": "LinkedIn",
+            "value": "https://www.linkedin.com/in/준혁-오-4973b9219/",
+            "icon": "linkedin"
+        }
     },
     "skills": [
         {

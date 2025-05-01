@@ -12,7 +12,45 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('current-year').textContent = new Date().getFullYear();
             document.getElementById('phone').textContent = config.contact.phone;
             document.getElementById('email').textContent = config.contact.email;
-            document.getElementById('website').textContent = config.contact.website;
+            
+            // 웹사이트 링크 설정
+            const websiteElement = document.getElementById('website');
+            const websiteValue = config.contact.website;
+
+            // 객체 형태의 웹사이트 정보 처리
+            if (websiteValue && typeof websiteValue === 'object') {
+                // 링크 설정
+                websiteElement.href = websiteValue.value || '#';
+                websiteElement.textContent = websiteValue.name || 'Link';
+                
+                // 아이콘 설정
+                const iconElement = document.getElementById('website-icon');
+                if (iconElement && websiteValue.icon) {
+                    iconElement.className = `fab fa-${websiteValue.icon}`;
+                }
+            } else if (typeof websiteValue === 'string') {
+                // 이전 버전 호환성 유지 (문자열 형태)
+                const linkMatch = websiteValue.match(/\[(.*?)\]\((.*?)\)/);
+                if (linkMatch && linkMatch.length === 3) {
+                    // Markdown 형식이면 텍스트와 URL 분리
+                    const linkParts = linkMatch[1].split('|');
+                    const linkText = linkParts[0] || 'Link';
+                    
+                    // 아이콘이 지정되어 있으면 변경
+                    if (linkParts.length > 2 && linkParts[2]) {
+                        const iconElement = document.getElementById('website-icon');
+                        iconElement.className = `fab fa-${linkParts[2]}`;
+                    }
+                    
+                    const linkUrl = linkMatch[2];
+                    websiteElement.href = linkUrl;
+                    websiteElement.textContent = linkText;
+                } else {
+                    // 일반 URL이면 그대로 사용
+                    websiteElement.href = websiteValue;
+                    websiteElement.textContent = 'Link';
+                }
+            }
 
             // 경력 정보 생성
             const experienceContainer = document.getElementById('experience-container');
@@ -103,7 +141,45 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('intro').textContent = defaultData.intro;
             document.getElementById('phone').textContent = defaultData.contact.phone;
             document.getElementById('email').textContent = defaultData.contact.email;
-            document.getElementById('website').textContent = defaultData.contact.website;
+            
+            // 웹사이트 링크 설정
+            const websiteElement = document.getElementById('website');
+            const websiteValue = defaultData.contact.website;
+
+            // 객체 형태의 웹사이트 정보 처리
+            if (websiteValue && typeof websiteValue === 'object') {
+                // 링크 설정
+                websiteElement.href = websiteValue.value || '#';
+                websiteElement.textContent = websiteValue.name || 'Link';
+                
+                // 아이콘 설정
+                const iconElement = document.getElementById('website-icon');
+                if (iconElement && websiteValue.icon) {
+                    iconElement.className = `fab fa-${websiteValue.icon}`;
+                }
+            } else if (typeof websiteValue === 'string') {
+                // 이전 버전 호환성 유지 (문자열 형태)
+                const defaultLinkMatch = websiteValue.match(/\[(.*?)\]\((.*?)\)/);
+                if (defaultLinkMatch && defaultLinkMatch.length === 3) {
+                    // Markdown 형식이면 텍스트와 URL 분리
+                    const linkParts = defaultLinkMatch[1].split('|');
+                    const linkText = linkParts[0] || 'Link';
+                    
+                    // 아이콘이 지정되어 있으면 변경
+                    if (linkParts.length > 2 && linkParts[2]) {
+                        const iconElement = document.getElementById('website-icon');
+                        iconElement.className = `fab fa-${linkParts[2]}`;
+                    }
+                    
+                    const linkUrl = defaultLinkMatch[2];
+                    websiteElement.href = linkUrl;
+                    websiteElement.textContent = linkText;
+                } else {
+                    // 일반 URL이면 그대로 사용
+                    websiteElement.href = websiteValue;
+                    websiteElement.textContent = 'Link';
+                }
+            }
 
             // 경력 정보 생성
             const experienceContainer = document.getElementById('experience-container');

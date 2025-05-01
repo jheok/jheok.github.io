@@ -19,14 +19,21 @@ body {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "experience contact"
+        "skills skills"
+        "projects projects"
+        "certifications certifications"
+        "education education"
+        "footer footer";
     padding: 40px;
 }
 
 /* 헤더 스타일 */
 header {
-    grid-column: 1 / span 2;
+    grid-area: header;
     border-bottom: 2px solid #eee;
     padding-bottom: 20px;
     margin-bottom: 30px;
@@ -44,22 +51,43 @@ h1 {
 
 /* 메인 컨텐츠 */
 main {
-    grid-column: 1;
+    display: contents; /* 그리드 레이아웃을 위해 contents로 설정 */
 }
 
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+}
+
+/* 각 섹션의 그리드 영역 설정 */
+.section:nth-of-type(1) {
+    grid-area: experience;
+}
+
+.section:nth-of-type(2) {
+    grid-area: skills;
+}
+
+.section:nth-of-type(3) {
+    grid-area: projects;
+}
+
+.section:nth-of-type(4) {
+    grid-area: certifications;
+}
+
+.section:nth-of-type(5) {
+    grid-area: education;
 }
 
 h2 {
     font-size: 24px;
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .job {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .job h3 {
@@ -199,29 +227,57 @@ h4 {
 
 /* 사이드바 스타일 */
 aside {
-    grid-column: 2;
+    grid-area: contact;
     background-color: #f9f9f9;
-    padding: 20px;
     border-radius: 5px;
+    padding: 15px;
+    align-self: stretch; /* 세로 방향으로 확장 */
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-info {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    height: 100%; /* 컨테이너 전체 높이 차지 */
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
 }
 
 .contact-info p {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
 }
 
 .contact-info i {
-    width: 20px;
-    margin-right: 10px;
+    width: 16px;
+    margin-right: 8px;
     text-align: center;
+}
+
+/* 연락처 정보 스타일링 */
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 /* 푸터 스타일 */
 footer {
-    grid-column: 1 / span 2;
+    grid-area: footer;
     text-align: center;
     margin-top: 30px;
     color: #999;
@@ -232,10 +288,12 @@ footer {
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
+        padding: 20px;
     }
     
     aside {
         grid-column: 1;
+        margin-top: 30px;
     }
     
     header, footer {
@@ -261,4 +319,29 @@ footer {
         display: block;
         width: 100%;
     }
+    
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .contact-info p {
+        width: 49%;
+        margin-right: 0;
+    }
+}
+
+/* 웹사이트 정보 스타일링 */
+#website-emoji {
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+#website-icon {
+    margin-right: 8px;
+}
+
+#website-label {
+    font-weight: 500;
 } 

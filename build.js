@@ -24,7 +24,6 @@ const idMap = {
     'intro': config.intro,
     'phone': config.contact.phone,
     'email': config.contact.email,
-    'website': config.contact.website,
     'current-year': new Date().getFullYear()
 };
 
@@ -32,6 +31,41 @@ const idMap = {
 for (const [id, value] of Object.entries(idMap)) {
     const regex = new RegExp(`<([^>]+)\\s+id=['"]{1}${id}['"]{1}[^>]*>\\s*<\\/`, 'g');
     html = html.replace(regex, `<$1 id="${id}">${value}</`);
+}
+
+// 웹사이트 링크 특별 처리
+const websiteRegex = /<a\s+id=['"]{1}website['"]{1}[^>]*>.*?<\/a>/g;
+const websiteValue = config.contact.website;
+
+// 객체 형태의 웹사이트 정보 처리
+if (websiteValue && typeof websiteValue === 'object') {
+    // 링크 설정
+    html = html.replace(websiteRegex, `<a id="website" href="${websiteValue.value || '#'}">${websiteValue.name || 'Link'}</a>`);
+    
+    // 아이콘 설정
+    const iconRegex = /<i\s+id=['"]{1}website-icon['"]{1}[^>]*class=['"]{1}.*?['"]{1}>/g;
+    if (websiteValue.icon) {
+        html = html.replace(iconRegex, `<i id="website-icon" class="fab fa-${websiteValue.icon}">`);
+    }
+} else if (typeof websiteValue === 'string') {
+    // 이전 버전 호환성 유지 (문자열 형태)
+    const linkMatch = websiteValue.match(/\[(.*?)\]\((.*?)\)/);
+    if (linkMatch && linkMatch.length === 3) {
+        // Markdown 형식이면 텍스트와 URL 분리
+        const linkParts = linkMatch[1].split('|');
+        const linkText = linkParts[0] || 'Link';
+        const linkUrl = linkMatch[2];
+        html = html.replace(websiteRegex, `<a id="website" href="${linkUrl}">${linkText}</a>`);
+        
+        // 아이콘이 지정되어 있으면 변경
+        if (linkParts.length > 2 && linkParts[2]) {
+            const iconRegex = /<i\s+id=['"]{1}website-icon['"]{1}[^>]*class=['"]{1}.*?['"]{1}>/g;
+            html = html.replace(iconRegex, `<i id="website-icon" class="fas fa-${linkParts[2]}">`);
+        }
+    } else {
+        // 일반 URL이면 그대로 사용
+        html = html.replace(websiteRegex, `<a id="website" href="${websiteValue}">Link</a>`);
+    }
 }
 
 // 컨테이너 내용 설정
