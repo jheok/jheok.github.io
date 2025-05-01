@@ -15,31 +15,31 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('website').textContent = config.contact.website;
 
             // 경력 정보 생성
-            const experienceSection = document.querySelector('.section:nth-of-type(1)');
+            const experienceContainer = document.getElementById('experience-container');
             if (config.experience && config.experience.length > 0) {
-                experienceSection.innerHTML += generateExperienceHTML(config.experience);
+                experienceContainer.innerHTML = generateExperienceHTML(config.experience);
             }
 
             // 스킬 정보 생성
-            const skillsTable = document.querySelector('.skills-table table');
+            const skillsTable = document.getElementById('skills-table');
             if (config.skills && config.skills.length > 0) {
                 skillsTable.innerHTML = generateSkillsHTML(config.skills);
             }
 
             // 프로젝트 정보 생성
-            const projectsSection = document.querySelector('.section:nth-of-type(3)');
+            const projectsContainer = document.getElementById('projects-container');
             if (config.companyProjects && config.companyProjects.length > 0) {
-                projectsSection.innerHTML += generateCompanyProjectsHTML(config.companyProjects);
+                projectsContainer.innerHTML = generateCompanyProjectsHTML(config.companyProjects);
             }
 
             // 자격증 정보 생성
-            const certList = document.querySelector('.certification-list');
+            const certList = document.getElementById('certifications-list');
             if (config.certifications && config.certifications.length > 0) {
                 certList.innerHTML = generateCertificationsHTML(config.certifications);
             }
 
             // 교육 정보 생성
-            const eduList = document.querySelector('.education-list');
+            const eduList = document.getElementById('education-list');
             if (config.education && config.education.length > 0) {
                 eduList.innerHTML = generateEducationHTML(config.education);
             }
@@ -106,31 +106,31 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('website').textContent = defaultData.contact.website;
 
             // 경력 정보 생성
-            const experienceSection = document.querySelector('.section:nth-of-type(1)');
+            const experienceContainer = document.getElementById('experience-container');
             if (defaultData.experience && defaultData.experience.length > 0) {
-                experienceSection.innerHTML += generateExperienceHTML(defaultData.experience);
+                experienceContainer.innerHTML = generateExperienceHTML(defaultData.experience);
             }
 
             // 스킬 정보 생성
-            const skillsTable = document.querySelector('.skills-table table');
+            const skillsTable = document.getElementById('skills-table');
             if (defaultData.skills && defaultData.skills.length > 0) {
                 skillsTable.innerHTML = generateSkillsHTML(defaultData.skills);
             }
 
             // 프로젝트 정보 생성
-            const projectsSection = document.querySelector('.section:nth-of-type(3)');
+            const projectsContainer = document.getElementById('projects-container');
             if (defaultData.companyProjects && defaultData.companyProjects.length > 0) {
-                projectsSection.innerHTML += generateCompanyProjectsHTML(defaultData.companyProjects);
+                projectsContainer.innerHTML = generateCompanyProjectsHTML(defaultData.companyProjects);
             }
 
             // 자격증 정보 생성
-            const certList = document.querySelector('.certification-list');
+            const certList = document.getElementById('certifications-list');
             if (defaultData.certifications && defaultData.certifications.length > 0) {
                 certList.innerHTML = generateCertificationsHTML(defaultData.certifications);
             }
 
             // 교육 정보 생성
-            const eduList = document.querySelector('.education-list');
+            const eduList = document.getElementById('education-list');
             if (defaultData.education && defaultData.education.length > 0) {
                 eduList.innerHTML = generateEducationHTML(defaultData.education);
             }
