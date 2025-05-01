@@ -3,82 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이력서 - 오준혁</title>
+    <title>이력서</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>오준혁</h1>
-            <p>엔지니어 입니다.</p>
+            <h1 id="name">이름</h1>
+            <p id="intro">자기소개</p>
         </header>
 
         <main>
+            <!-- EXPERIENCE 섹션 - JavaScript에서 동적 생성 -->
             <section class="section">
                 <h2>EXPERIENCE</h2>
-                <div class="job">
-                <h3>백엔드 개발 - 정규직, <span>크림(KREAM) - 네이버</span> (<span>2023.09 ~ Present</span>)</h3>
-                <ul><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li></ul>
-            </div><div class="job">
-                <h3>데이터 플랫폼 개발 - 정규직, <span>모비젠(Mobigen)</span> (<span>2021.01 ~ 2023.09</span>)</h3>
-                <ul><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li></ul>
-            </div><div class="job">
-                <h3>백엔드 개발자 - 인턴, <span>모비젠(Mobigen)</span> (<span>2020.07 ~ 2020.12</span>)</h3>
-                <ul><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li></ul>
-            </div>
+                <!-- JavaScript로 동적 생성됨 -->
             </section>
 
+            <!-- SKILLS 섹션 -->
             <section class="section">
                 <h2>SKILLS</h2>
                 <div class="skills-table">
                     <table>
-                        <tr>
-            <td class="skill-category">Data Platform & Framework</td>
-            <td>ELK, OpenSearch, Kubernetes, Docker, Kafka, Airflow, Fluentd, Flink, PySpark</td>
-        </tr><tr>
-            <td class="skill-category">Language</td>
-            <td>Python, Java</td>
-        </tr><tr>
-            <td class="skill-category">Monitoring</td>
-            <td>Prometheus, Thanos, Grafana</td>
-        </tr><tr>
-            <td class="skill-category">CI/CD</td>
-            <td>Jenkins, Teamcity, Ansible</td>
-        </tr><tr>
-            <td class="skill-category">Project Management & Documentation</td>
-            <td>Wiki, Jira</td>
-        </tr>
+                        <!-- JavaScript로 동적 생성됨 -->
                     </table>
                 </div>
             </section>
 
+            <!-- PROJECTS 섹션 - JavaScript에서 동적 생성 -->
             <section class="section">
                 <h2>PROJECTS</h2>
-                <div class="company-project">
-            <h3 class="company-name">크림(KREAM) - 네이버</h3>
-            <div class="project-period">2023.09 ~ Present</div><div class="project"><h4>타이틀</h4><ul><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li></ul><div class="project-result">
-                        <h4>프로젝트 성과</h4>
-                        <ul><li>ㅁㅁㅁㅁ</li></ul>
-                    </div><div class="skills">
-                        <h4>Skill Keywords</h4>
-                        <p>Elasticsearch, Kibana, Kubernetes, Kafka, Kafka-connect, Java, Airflow, PySpark, Hadoop, Ansible</p>
-                    </div></div><div class="project"><h4>타이틀</h4><ul><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li></ul></div></div><div class="company-project">
-            <h3 class="company-name">모비젠(Mobigen)</h3>
-            <div class="project-period">2021.01 ~ 2023.09</div><div class="project"><h4>타이틀</h4><ul><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li><li>ㅁㅁㅁㅁ</li></ul></div></div>
+                <!-- JavaScript로 동적 생성됨 -->
             </section>
 
+            <!-- CERTIFICATIONS 섹션 -->
             <section class="section">
                 <h2>CERTIFICATIONS</h2>
                 <ul class="certification-list">
-                    <li>AWS Certified Developer Associate <span class="cert-date">2023. 01</span></li>
+                    <!-- JavaScript로 동적 생성됨 -->
                 </ul>
             </section>
 
+            <!-- EDUCATION 섹션 -->
             <section class="section">
                 <h2>EDUCATION</h2>
                 <ul class="education-list">
-                    <li>한양대 ERICA 컴퓨터공학과 <span class="edu-date">2019 - 2021</span></li><li>한신대 소프트웨어학부 <span class="edu-date">2014 - 2018</span></li>
+                    <!-- JavaScript로 동적 생성됨 -->
                 </ul>
             </section>
         </main>
@@ -86,15 +57,17 @@
         <aside>
             <section class="contact-info">
                 <h2>CONTACT</h2>
-                <p><i class="fas fa-phone"></i> Phone: 010-9689-7969</p>
-                <p><i class="fas fa-envelope"></i> Email: cfd0318@naver.com</p>
-                <p><i class="fas fa-globe"></i> Website: kshell.tistory.com</p>
+                <p><i class="fas fa-phone"></i> Phone: <span id="phone">-</span></p>
+                <p><i class="fas fa-envelope"></i> Email: <span id="email">-</span></p>
+                <p><i class="fas fa-globe"></i> Website: <span id="website">-</span></p>
             </section>
         </aside>
     </div>
 
     <footer>
-        <p>&copy; 2025 - 이력서</p>
+        <p>&copy; <span id="current-year">2023</span> - 이력서</p>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

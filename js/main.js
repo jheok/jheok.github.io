@@ -148,7 +148,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // 프로젝트 정보 업데이트
-        if (data.projects && data.projects.length > 0) {
+        if (data.companyProjects && data.companyProjects.length > 0) {
+            const projectsSection = document.querySelector('.section:nth-of-type(3)');
+            projectsSection.innerHTML = '<h2>PROJECTS</h2>';
+            
+            // generateCompanyProjectsHTML 함수 호출
+            const companyProjectsHTML = generateCompanyProjectsHTML(data.companyProjects);
+            projectsSection.innerHTML += companyProjectsHTML;
+        }
+        // 기존 projects 배열 처리 (fallback)
+        else if (data.projects && data.projects.length > 0) {
             const projectsSection = document.querySelector('.section:nth-of-type(3)');
             projectsSection.innerHTML = '<h2>PROJECTS</h2>';
             
@@ -295,4 +304,61 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             updateResumeInfo(defaultData);
         });
-}); 
+});
+
+// 회사별 프로젝트 HTML 생성 함수
+function generateCompanyProjectsHTML(companyProjects) {
+    if (!companyProjects || !companyProjects.length) return '';
+    
+    let html = '';
+    
+    companyProjects.forEach(companyProject => {
+        // 회사 정보
+        html += `<div class="company-project">
+            <h3 class="company-name">${companyProject.company}</h3>
+            <div class="project-period">${companyProject.period}</div>`;
+        
+        // 각 프로젝트
+        if (companyProject.projects && companyProject.projects.length) {
+            companyProject.projects.forEach(project => {
+                html += `<div class="project">`;
+                
+                if (project.title) {
+                    html += `<h4>${project.title}</h4>`;
+                }
+                
+                if (project.details && project.details.length) {
+                    html += '<ul>';
+                    project.details.forEach(detail => {
+                        html += `<li>${detail}</li>`;
+                    });
+                    html += '</ul>';
+                }
+                
+                if (project.achievements && project.achievements.length) {
+                    html += `<div class="project-result">
+                        <h4>프로젝트 성과</h4>
+                        <ul>`;
+                    project.achievements.forEach(achievement => {
+                        html += `<li>${achievement}</li>`;
+                    });
+                    html += `</ul>
+                    </div>`;
+                }
+                
+                if (project.skills) {
+                    html += `<div class="skills">
+                        <h4>Skill Keywords</h4>
+                        <p>${project.skills}</p>
+                    </div>`;
+                }
+                
+                html += `</div>`; // project 닫기
+            });
+        }
+        
+        html += `</div>`; // company-project 닫기
+    });
+    
+    return html;
+} 
