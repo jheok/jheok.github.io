@@ -204,7 +204,7 @@ function generateSkillsHTML(skills) {
 }
 
 // 생성된 HTML 파일 저장
-const outputPath = path.join(__dirname, 'resume.html');
+const outputPath = path.join(__dirname, 'index.html');
 fs.writeFileSync(outputPath, html);
 
 console.log(`정적 HTML 파일이 생성되었습니다: ${outputPath}`); 
