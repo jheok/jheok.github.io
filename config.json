@@ -13,29 +13,29 @@
     "experience": [
         {
             "company": "크림(Kream) - 네이버(Naver)",
-            "position": "백엔드 개발 / 데이터 엔지니어링 (겸직) - 정규직",
-            "period": "2023.09 ~ Present",
+            "position": "백엔드 개발 / 데이터 엔지니어링 (겸직)",
+            "period": "2023.09 ~ Present (정규직)",
             "responsibilities": [
                 "크림, 크림 어드민 (C2C) 서버 개발/운영",
-                "크림 파트너, 크림 파트너 어드민 (B2C), Open-Api 서버 개발/운영",
-                "크림 데이터 환경 구축",
+                "파트너, 파트너 어드민 (B2C), Open-Api 서버 개발/운영",
+                "데이터 환경 구축",
                 "외부 연동사와 비즈니스적 운영 이슈 대응"
             ]
         },
         {
             "company": "모비젠(Mobigen)",
-            "position": "데이터 플랫폼 개발 - 정규직",
-            "period": "2021.01 ~ 2023.09",
+            "position": "데이터 플랫폼 개발",
+            "period": "2021.01 ~ 2023.09 (정규직)",
             "responsibilities": [
-                "Spark 기반 분석 플랫폼 개발/운영",
-                "Polars + Pandas 기반 분석 플랫폼 개발/운영",
+                "DSL + Spark 기반 분석 플랫폼 개발/운영",
+                "DSL + Polars + Pandas 기반 분석 플랫폼 개발/운영",
                 "파일 기반 분석 플랫폼 개발/운영"
             ]
         },
         {
             "company": "모비젠(Mobigen)",
-            "position": "백엔드 개발 - 인턴",
-            "period": "2020.07 ~ 2020.12",
+            "position": "백엔드 개발",
+            "period": "2020.07 ~ 2020.12 (인턴)",
             "responsibilities": [
                 "Spark 기반 분석 플랫폼에서 사용되는 DSL 개발"
             ]
@@ -125,8 +125,8 @@
     ],
     "companyProjects": [
         {
-            "company": "크림(KREAM) - 네이버",
-            "period": "2023.09 ~ Present",
+            "company": "크림(Kream) - 네이버(Naver)",
+            "period": "2023.09 ~ Present (정규직)",
             "projects": [
                 {
                     "title": "타이틀",
@@ -152,7 +152,21 @@
         },
         {
             "company": "모비젠(Mobigen)",
-            "period": "2021.01 ~ 2023.09",
+            "period": "2021.01 ~ 2023.09 (정규직)",
+            "projects": [
+                {
+                    "title": "타이틀",
+                    "details": [
+                        "ㅁㅁㅁㅁ",
+                        "ㅁㅁㅁㅁ",
+                        "ㅁㅁㅁㅁ"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "모비젠(Mobigen)",
+            "period": "2021.01 ~ 2023.09 (인턴)",
             "projects": [
                 {
                     "title": "타이틀",

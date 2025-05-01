@@ -10,7 +10,7 @@ function generateExperienceHTML(experience) {
         experience.forEach(job => {
             html += `<div class="job">
                 <h3><span>${job.company || '회사명'}</span></h3>
-                <div class="job-details">${job.period || ''}, <span>${job.position || '직책'}</span></div>
+                <div class="job-details">${job.period || ''} - <span>${job.position || '직책'}</span></div>
                 ${generateResponsibilitiesHTML(job.responsibilities)}
             </div>`;
         });
