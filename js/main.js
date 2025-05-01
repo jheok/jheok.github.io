@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (websiteValue && typeof websiteValue === 'object') {
                 // 링크 설정
                 websiteElement.href = websiteValue.value || '#';
-                websiteElement.textContent = websiteValue.name || 'Link';
+                websiteElement.textContent = websiteValue.name || 'LinkedIn'; // 'LinkedIn'으로 고정 텍스트 사용
                 
                 // 아이콘 설정
                 const iconElement = document.getElementById('website-icon');
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (websiteValue && typeof websiteValue === 'object') {
                 // 링크 설정
                 websiteElement.href = websiteValue.value || '#';
-                websiteElement.textContent = websiteValue.name || 'Link';
+                websiteElement.textContent = websiteValue.name || 'LinkedIn'; // 'LinkedIn'으로 고정 텍스트 사용
                 
                 // 아이콘 설정
                 const iconElement = document.getElementById('website-icon');
