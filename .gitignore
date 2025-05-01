@@ -1,0 +1,27 @@
+# OS 관련 파일
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 에디터/IDE 파일
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# 로그 파일
+*.log
+
+# GitHub Pages 빌드 파일
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# 개인 설정 파일 백업
+config.json.bak 

@@ -1,0 +1,112 @@
+{
+    "name": "오준혁",
+    "intro": "엔지니어 입니다.",
+    "contact": {
+        "phone": "010-9689-7969",
+        "email": "cfd0318@naver.com",
+        "website": "kshell.tistory.com"
+    },
+    "skills": [
+        {
+            "name": "Data Platform & Framework",
+            "value": "ELK, OpenSearch, Kubernetes, Docker, Kafka, Airflow, Fluentd, Flink, PySpark"
+        },
+        {
+            "name": "Language",
+            "value": "Python, Java"
+        },
+        {
+            "name": "Monitoring",
+            "value": "Prometheus, Thanos, Grafana"
+        },
+        {
+            "name": "CI/CD",
+            "value": "Jenkins, Teamcity, Ansible"
+        },
+        {
+            "name": "Project Management & Documentation",
+            "value": "Wiki, Jira"
+        }
+    ],
+    "experience": [
+        {
+            "company": "크림(KREAM) - 네이버",
+            "position": "백엔드 개발 - 정규직",
+            "period": "2023.09 ~ Present",
+            "responsibilities": [
+                "ㅁㅁㅁㅁ",
+                "ㅁㅁㅁㅁ",
+                "ㅁㅁㅁㅁ"
+            ]
+        },
+        {
+            "company": "모비젠(Mobigen)",
+            "position": "데이터 플랫폼 개발 - 정규직",
+            "period": "2021.01 ~ 2023.09",
+            "responsibilities": [
+                "ㅁㅁㅁㅁ",
+                "ㅁㅁㅁㅁ",
+                "ㅁㅁㅁㅁ"
+            ]
+        },
+        {
+            "company": "모비젠(Mobigen)",
+            "position": "백엔드 개발자 - 인턴",
+            "period": "2020.07 ~ 2020.12",
+            "responsibilities": [
+                "ㅁㅁㅁㅁ",
+                "ㅁㅁㅁㅁ",
+                "ㅁㅁㅁㅁ"
+            ]
+        }
+    ],
+    "companyProjects": [
+        {
+            "company": "크림(KREAM) - 네이버",
+            "period": "2023.09 ~ Present",
+            "projects": [
+                {
+                    "title": "타이틀",
+                    "details": [
+                        "ㅁㅁㅁㅁ",
+                        "ㅁㅁㅁㅁ",
+                        "ㅁㅁㅁㅁ"
+                    ],
+                    "achievements": [
+                        "ㅁㅁㅁㅁ"
+                    ],
+                    "skills": "Elasticsearch, Kibana, Kubernetes, Kafka, Kafka-connect, Java, Airflow, PySpark, Hadoop, Ansible"
+                },
+                {
+                    "title": "타이틀",
+                    "details": [
+                        "ㅁㅁㅁㅁ",
+                        "ㅁㅁㅁㅁ",
+                        "ㅁㅁㅁㅁ"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "모비젠(Mobigen)",
+            "period": "2021.01 ~ 2023.09",
+            "projects": [
+                {
+                    "title": "타이틀",
+                    "details": [
+                        "ㅁㅁㅁㅁ",
+                        "ㅁㅁㅁㅁ",
+                        "ㅁㅁㅁㅁ"
+                    ]
+                }
+            ]
+        }
+    ],
+    "certifications": [
+        { "name": "AWS Certified Developer Associate", "date": "2023. 01" }
+    ],
+    "education": [
+        { "school": "한양대 ERICA 컴퓨터공학과", "period": "2019 - 2021" },
+        { "school": "한신대 소프트웨어학부", "period": "2014 - 2018" }
+    ]
+} 
