@@ -8,7 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(config => {
             // 기본 정보 업데이트
             document.getElementById('name').textContent = config.name;
-            document.getElementById('intro').textContent = config.intro;
+            
+            // intro 텍스트에 줄바꿈 처리
+            const introEl = document.getElementById('intro');
+            if (config.intro && config.intro.includes('\n')) {
+                introEl.innerHTML = config.intro.replace(/\n/g, '<br>');
+            } else {
+                introEl.textContent = config.intro;
+            }
+            
             document.getElementById('current-year').textContent = new Date().getFullYear();
             document.getElementById('phone').textContent = config.contact.phone;
             document.getElementById('email').textContent = config.contact.email;
@@ -138,46 +146,54 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 기본 정보 업데이트
             document.getElementById('name').textContent = defaultData.name;
-            document.getElementById('intro').textContent = defaultData.intro;
+            
+            // intro 텍스트에 줄바꿈 처리
+            const defaultIntroEl = document.getElementById('intro');
+            if (defaultData.intro && defaultData.intro.includes('\n')) {
+                defaultIntroEl.innerHTML = defaultData.intro.replace(/\n/g, '<br>');
+            } else {
+                defaultIntroEl.textContent = defaultData.intro;
+            }
+            
             document.getElementById('phone').textContent = defaultData.contact.phone;
             document.getElementById('email').textContent = defaultData.contact.email;
             
             // 웹사이트 링크 설정
-            const websiteElement = document.getElementById('website');
-            const websiteValue = defaultData.contact.website;
+            const defaultWebsiteElement = document.getElementById('website');
+            const defaultWebsiteValue = defaultData.contact.website;
 
             // 객체 형태의 웹사이트 정보 처리
-            if (websiteValue && typeof websiteValue === 'object') {
+            if (defaultWebsiteValue && typeof defaultWebsiteValue === 'object') {
                 // 링크 설정
-                websiteElement.href = websiteValue.value || '#';
-                websiteElement.textContent = websiteValue.name || 'LinkedIn'; // 'LinkedIn'으로 고정 텍스트 사용
+                defaultWebsiteElement.href = defaultWebsiteValue.value || '#';
+                defaultWebsiteElement.textContent = defaultWebsiteValue.name || 'LinkedIn'; // 'LinkedIn'으로 고정 텍스트 사용
                 
                 // 아이콘 설정
-                const iconElement = document.getElementById('website-icon');
-                if (iconElement && websiteValue.icon) {
-                    iconElement.className = `fab fa-${websiteValue.icon}`;
+                const defaultIconElement = document.getElementById('website-icon');
+                if (defaultIconElement && defaultWebsiteValue.icon) {
+                    defaultIconElement.className = `fab fa-${defaultWebsiteValue.icon}`;
                 }
-            } else if (typeof websiteValue === 'string') {
+            } else if (typeof defaultWebsiteValue === 'string') {
                 // 이전 버전 호환성 유지 (문자열 형태)
-                const defaultLinkMatch = websiteValue.match(/\[(.*?)\]\((.*?)\)/);
+                const defaultLinkMatch = defaultWebsiteValue.match(/\[(.*?)\]\((.*?)\)/);
                 if (defaultLinkMatch && defaultLinkMatch.length === 3) {
                     // Markdown 형식이면 텍스트와 URL 분리
-                    const linkParts = defaultLinkMatch[1].split('|');
-                    const linkText = linkParts[0] || 'Link';
+                    const defaultLinkParts = defaultLinkMatch[1].split('|');
+                    const defaultLinkText = defaultLinkParts[0] || 'Link';
                     
                     // 아이콘이 지정되어 있으면 변경
-                    if (linkParts.length > 2 && linkParts[2]) {
-                        const iconElement = document.getElementById('website-icon');
-                        iconElement.className = `fab fa-${linkParts[2]}`;
+                    if (defaultLinkParts.length > 2 && defaultLinkParts[2]) {
+                        const defaultIconElement = document.getElementById('website-icon');
+                        defaultIconElement.className = `fab fa-${defaultLinkParts[2]}`;
                     }
                     
-                    const linkUrl = defaultLinkMatch[2];
-                    websiteElement.href = linkUrl;
-                    websiteElement.textContent = linkText;
+                    const defaultLinkUrl = defaultLinkMatch[2];
+                    defaultWebsiteElement.href = defaultLinkUrl;
+                    defaultWebsiteElement.textContent = defaultLinkText;
                 } else {
                     // 일반 URL이면 그대로 사용
-                    websiteElement.href = websiteValue;
-                    websiteElement.textContent = 'Link';
+                    defaultWebsiteElement.href = defaultWebsiteValue;
+                    defaultWebsiteElement.textContent = 'Link';
                 }
             }
 
