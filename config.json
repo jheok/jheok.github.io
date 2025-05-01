@@ -10,41 +10,15 @@
             "icon": "linkedin"
         }
     },
-    "skills": [
-        {
-            "name": "프로그래밍 언어",
-            "value": "Python, Java"
-        },
-        {
-            "name": "프레임워크",
-            "value": "Flask, Spring Boot"
-        },
-        {
-            "name": "프로토콜",
-            "value": "HTTP, REST, gRPC"
-        },
-        {
-            "name": "ORM",
-            "value": "SQLAlchemy, JPA"
-        },
-        {
-            "name": "데이터 베이스",
-            "value": "MariaDB, PostgreSQL, Redis, Memcached, Tibero, Oracle, Altibase, Minio, HDFS, 자체DB"
-        },
-        {
-            "name": "DB 형상관리 툴",
-            "value": "alembic, Flayway"
-        }
-    ],
     "experience": [
         {
-            "company": "크림(KREAM) - 네이버",
+            "company": "크림(Kream) - 네이버(Naver)",
             "position": "백엔드 개발 - 정규직",
             "period": "2023.09 ~ Present",
             "responsibilities": [
-                "ㅁㅁㅁㅁ",
-                "ㅁㅁㅁㅁ",
-                "ㅁㅁㅁㅁ"
+                "크림, 크림 어드민 (C2C) 서버 운영",
+                "크림 파트너, 크림 파트너 어드민 (B2C) 서버 운영",
+                "크림 데이터 환경 구축"
             ]
         },
         {
@@ -66,6 +40,88 @@
                 "ㅁㅁㅁㅁ",
                 "ㅁㅁㅁㅁ"
             ]
+        }
+    ],
+    "skills": [
+        {
+            "name": "프로그래밍 언어",
+            "value": "Python, Java, Vue"
+        },
+        {
+            "name": "프레임워크",
+            "value": "FastApi, Flask, Spring Boot"
+        },
+        {
+            "name": "웹서버",
+            "value": "Nginx"
+        },
+        {
+            "name": "프로토콜",
+            "value": "HTTP, REST, gRPC"
+        },
+        {
+            "name": "ORM",
+            "value": "SQLAlchemy, JPA"
+        },
+        {
+            "name": "데이터 베이스 및 저장소",
+            "value": "MariaDB, PostgreSQL, Redis, Memcached, Minio, HDFS"
+        },
+        {
+            "name": "DB 형상관리 툴",
+            "value": "alembic, Flayway"
+        },
+        {
+            "name": "분산 처리 엔진",
+            "value": "Spark, Trino"
+        },
+        {
+            "name": "메세지 브로커",
+            "value": "Kafka"
+        },
+        {
+            "name": "ELK stack",
+            "value": "logstash, Filebeat, Elastic-Search"
+        },
+        {
+            "name": "데이터 분석 툴",
+            "value": "Pandas, Polars, Pyspark, Apache Sedona(geoSpark)"
+        },
+        {
+            "name": "자연어 분석 툴",
+            "value": "TextRank, Mecab"
+        },
+        {
+            "name": "파싱 툴",
+            "value": "Yacc, Lex"
+        },
+        {
+            "name": "CI/CD",
+            "value": "Jenkins, ArgoCD"
+        },
+        {
+            "name": "테스트 툴",
+            "value": "doctest, junit5, unittest, ngrinder"
+        },
+        {
+            "name": "컨테이너화 및 오케스트레이션",
+            "value": "Docker, Kubernetes (k8s)"
+        },
+        {
+            "name": "코드 분석 툴",
+            "value": "Sonarqube, flake8"
+        },
+        {
+            "name": "에러 트래킹",
+            "value": "Sentry"
+        },
+        {
+            "name": "버전 관리 및 협업 도구",
+            "value": "GitHub, GitLab, Jira, Swagger, Mattermost, Slack"
+        },
+        {
+            "name": "Saas",
+            "value": "Naver Pasta"
         }
     ],
     "companyProjects": [

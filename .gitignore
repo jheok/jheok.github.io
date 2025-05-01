@@ -25,3 +25,6 @@ _site/
 
 # 개인 설정 파일 백업
 config.json.bak 
+
+# resume
+resume.html
