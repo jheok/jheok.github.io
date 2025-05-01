@@ -9,6 +9,7 @@ const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 // index.html 파일 복사
 const templatePath = path.join(__dirname, 'index.html');
 const outputPath = path.join(__dirname, 'resume.html');
+const indexPath = path.join(__dirname, 'index.html');
 fs.copyFileSync(templatePath, outputPath);
 
 // 생성된 HTML 파일 읽기
@@ -21,11 +22,17 @@ html = html.replace(titleRegex, `<title>이력서 - ${config.name}</title>`);
 // ID 기반 속성 설정
 const idMap = {
     'name': config.name,
-    'intro': config.intro,
     'phone': config.contact.phone,
     'email': config.contact.email,
     'current-year': new Date().getFullYear()
 };
+
+// 줄바꿈(\n)이 있는 내용 처리 (intro)
+let introText = config.intro;
+if (introText && introText.includes('\n')) {
+    introText = introText.replace(/\n/g, '<br>');
+}
+idMap['intro'] = introText;
 
 // ID 값 설정
 for (const [id, value] of Object.entries(idMap)) {
@@ -91,7 +98,6 @@ for (const [id, content] of Object.entries(containerMap)) {
 // 스크립트 태그 제거 (정적 HTML이므로 필요 없음)
 html = html.replace(/<script.*?<\/script>/gs, '');
 
-// 저장
+// resume.html 저장
 fs.writeFileSync(outputPath, html);
-
 console.log(`정적 HTML 파일이 생성되었습니다: ${outputPath}`);

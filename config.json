@@ -1,6 +1,6 @@
 {
     "name": "오준혁",
-    "intro": "엔지니어 입니다.",
+    "intro": "Python과 Java 를 주력으로 개발을 진행해 왔으며 만 4년차 백엔드 엔지니어로써 일하고 있습니다. \n저는 개발자란 코딩을 하는 사람이 아닌 사용자가 원하는 데이터를 정확하고 신속하게 전달하는 방법을 탐구하고 개발해내는 사람이라 생각하고 있습니다",
     "contact": {
         "phone": "010-9689-7969",
         "email": "cfd0318@naver.com",
@@ -12,24 +12,28 @@
     },
     "skills": [
         {
-            "name": "Data Platform & Framework",
-            "value": "ELK, OpenSearch, Kubernetes, Docker, Kafka, Airflow, Fluentd, Flink, PySpark"
-        },
-        {
-            "name": "Language",
+            "name": "프로그래밍 언어",
             "value": "Python, Java"
         },
         {
-            "name": "Monitoring",
-            "value": "Prometheus, Thanos, Grafana"
+            "name": "프레임워크",
+            "value": "Flask, Spring Boot"
         },
         {
-            "name": "CI/CD",
-            "value": "Jenkins, Teamcity, Ansible"
+            "name": "프로토콜",
+            "value": "HTTP, REST, gRPC"
         },
         {
-            "name": "Project Management & Documentation",
-            "value": "Wiki, Jira"
+            "name": "ORM",
+            "value": "SQLAlchemy, JPA"
+        },
+        {
+            "name": "데이터 베이스",
+            "value": "MariaDB, PostgreSQL, Redis, Memcached, Tibero, Oracle, Altibase, Minio, HDFS, 자체DB"
+        },
+        {
+            "name": "DB 형상관리 툴",
+            "value": "alembic, Flayway"
         }
     ],
     "experience": [
