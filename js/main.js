@@ -36,14 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     skillsTable.appendChild(tr);
                 });
-            } 
-            // 기존 객체 형태 지원 (하위 호환성)
-            else {
-                if (data.skills.dataPlatform) document.getElementById('data-platform-skills').textContent = data.skills.dataPlatform;
-                if (data.skills.language) document.getElementById('language-skills').textContent = data.skills.language;
-                if (data.skills.monitoring) document.getElementById('monitoring-skills').textContent = data.skills.monitoring;
-                if (data.skills.cicd) document.getElementById('cicd-skills').textContent = data.skills.cicd;
-                if (data.skills.projectManagement) document.getElementById('project-management-skills').textContent = data.skills.projectManagement;
             }
         }
         
@@ -59,8 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     jobDiv.className = 'job';
                     
                     const jobTitle = document.createElement('h3');
-                    jobTitle.innerHTML = `${job.position || '직책'}, <span>${job.company || '회사명'}</span> (<span>${job.period || ''}</span>)`;
+                    jobTitle.innerHTML = `<span>${job.company || '회사명'}</span>`;
                     jobDiv.appendChild(jobTitle);
+                    
+                    const jobDetails = document.createElement('div');
+                    jobDetails.className = 'job-details';
+                    jobDetails.innerHTML = `${job.position || '직책'}, <span>${job.period || ''}</span>`;
+                    jobDiv.appendChild(jobDetails);
                     
                     if (job.responsibilities && job.responsibilities.length > 0) {
                         const ul = document.createElement('ul');
@@ -244,8 +241,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // config.json 파일에서 이력서 정보 로드
     fetch('config.json')
         .then(response => response.json())
-        .then(data => {
-            updateResumeInfo(data);
+        .then(config => {
+            // 기본 정보 업데이트
+            document.getElementById('name').textContent = config.name;
+            document.getElementById('intro').textContent = config.intro;
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            document.getElementById('phone').textContent = config.contact.phone;
+            document.getElementById('email').textContent = config.contact.email;
+            document.getElementById('website').textContent = config.contact.website;
+
+            // 경력 정보 생성
+            const experienceSection = document.querySelector('.section:nth-of-type(1)');
+            if (config.experience && config.experience.length > 0) {
+                experienceSection.innerHTML += generateExperienceHTML(config.experience);
+            }
+
+            // 스킬 정보 생성
+            const skillsTable = document.querySelector('.skills-table table');
+            if (config.skills && config.skills.length > 0) {
+                skillsTable.innerHTML = generateSkillsHTML(config.skills);
+            }
+
+            // 프로젝트 정보 생성
+            const projectsSection = document.querySelector('.section:nth-of-type(3)');
+            if (config.companyProjects && config.companyProjects.length > 0) {
+                projectsSection.innerHTML += generateCompanyProjectsHTML(config.companyProjects);
+            }
+
+            // 자격증 정보 생성
+            const certList = document.querySelector('.certification-list');
+            if (config.certifications && config.certifications.length > 0) {
+                certList.innerHTML = generateCertificationsHTML(config.certifications);
+            }
+
+            // 교육 정보 생성
+            const eduList = document.querySelector('.education-list');
+            if (config.education && config.education.length > 0) {
+                eduList.innerHTML = generateEducationHTML(config.education);
+            }
         })
         .catch(error => {
             console.error('이력서 데이터를 로드하는 중 오류가 발생했습니다:', error);
