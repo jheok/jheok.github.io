@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('phone').textContent = config.contact.phone;
             document.getElementById('email').textContent = config.contact.email;
             
+            // 스킬 설명 업데이트
+            if (config.skills_description) {
+                document.getElementById('skills-description').textContent = config.skills_description;
+            }
+            
             // 웹사이트 링크 설정
             const websiteElement = document.getElementById('website');
             const websiteValue = config.contact.website;
@@ -157,6 +162,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             document.getElementById('phone').textContent = defaultData.contact.phone;
             document.getElementById('email').textContent = defaultData.contact.email;
+            
+            // 스킬 설명 업데이트
+            if (defaultData.skills_description) {
+                document.getElementById('skills-description').textContent = defaultData.skills_description;
+            }
             
             // 웹사이트 링크 설정
             const defaultWebsiteElement = document.getElementById('website');

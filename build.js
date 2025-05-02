@@ -34,6 +34,11 @@ if (introText && introText.includes('\n')) {
 }
 idMap['intro'] = introText;
 
+// 스킬 설명 추가
+if (config.skills_description) {
+    idMap['skills-description'] = config.skills_description;
+}
+
 // ID 값 설정
 for (const [id, value] of Object.entries(idMap)) {
     const regex = new RegExp(`<([^>]+)\\s+id=['"]{1}${id}['"]{1}[^>]*>\\s*<\\/`, 'g');

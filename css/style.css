@@ -135,6 +135,15 @@ li {
     margin-bottom: 5px;
 }
 
+/* 섹션 설명 스타일 */
+.section-description {
+    font-size: 15px;
+    color: #888;
+    margin: 20px 0;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
 /* 스킬 테이블 스타일 */
 .skills-table {
     width: 100%;

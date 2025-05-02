@@ -41,6 +41,7 @@
             ]
         }
     ],
+    "skills_description": "주로 백엔드 개발과 데이터 엔지니어링에 중점을 두고 있으며, 다양한 도구와 언어를 사용하여 효율적인 시스템을 구축합니다.",
     "skills": [
         {
             "name": "프로그래밍 언어",
@@ -75,8 +76,12 @@
             "value": "Spark, Trino"
         },
         {
-            "name": "메세지 브로커",
-            "value": "Kafka"
+            "name": "Kafka 에코시스템",
+            "value": "Kafka, Kafka Connect, Schema Registry"
+        },
+        {
+            "name": "CDC",
+            "value": "Debezium"
         },
         {
             "name": "ELK stack",
