@@ -50,7 +50,7 @@ function generateCompanyProjectsHTML(companyProjects) {
                 html += `<div class="project">`;
                 
                 if (project.title) {
-                    html += `<h4>${project.title}</h4>`;
+                    html += `<h3>${project.title}</h3>`;
                 }
                 
                 if (project.details && project.details.length) {
