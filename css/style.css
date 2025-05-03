@@ -20,6 +20,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-columns: 4fr 1fr;
+    gap: 30px;
     grid-template-areas: 
         "header header"
         "experience contact"
@@ -84,6 +85,14 @@ h2 {
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
     margin-bottom: 15px;
+}
+
+/* CONTACT 영역 h2 스타일 분리 */
+.contact-info h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333; /* CONTACT 영역 밑줄 두께 조정 */
 }
 
 .job {
@@ -239,10 +248,12 @@ aside {
     grid-area: contact;
     background-color: #f9f9f9;
     border-radius: 5px;
-    padding: 15px;
+    padding: 20px;
+    margin-left: 10px; /* 왼쪽 여백 추가 */
     align-self: stretch; /* 세로 방향으로 확장 */
     display: flex;
     flex-direction: column;
+    border-left: 1px solid #eee; /* 왼쪽 테두리 추가 */
 }
 
 .contact-info {
@@ -250,13 +261,6 @@ aside {
     height: 100%; /* 컨테이너 전체 높이 차지 */
     display: flex;
     flex-direction: column;
-}
-
-.contact-info h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
 }
 
 .contact-info p {
@@ -297,12 +301,26 @@ footer {
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "contact"
+            "experience"
+            "skills"
+            "projects"
+            "certifications"
+            "education"
+            "footer";
         padding: 20px;
+        gap: 20px; /* 모바일에서의 간격 조정 */
     }
     
     aside {
         grid-column: 1;
-        margin-top: 30px;
+        margin-top: 0;
+        margin-left: 0; /* 모바일에서는 여백 제거 */
+        border-left: none; /* 모바일에서는 왼쪽 테두리 제거 */
+        border-bottom: 1px solid #eee; /* 대신 아래 테두리 추가 */
+        padding-bottom: 20px;
     }
     
     header, footer {
@@ -342,15 +360,6 @@ footer {
 }
 
 /* 웹사이트 정보 스타일링 */
-#website-emoji {
-    margin-right: 5px;
-    font-size: 1.2em;
-}
-
 #website-icon {
     margin-right: 8px;
-}
-
-#website-label {
-    font-weight: 500;
 } 
