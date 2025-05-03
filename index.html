@@ -3,26 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="print-color-adjust" content="exact">
+    <meta name="format-detection" content="telephone=no">
     <title>이력서 - 오준혁</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 15mm;
+        }
+        @media print {
+            html, body {
+                background-color: white !important;
+                width: auto !important;
+                height: auto !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            .container {
+                display: grid !important;
+                grid-template-columns: 4fr 1fr !important;
+                grid-template-areas: 
+                    "header header"
+                    "experience contact"
+                    "skills skills"
+                    "projects projects"
+                    "certifications certifications"
+                    "education education"
+                    "footer footer" !important;
+                box-shadow: none !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 20px 40px !important;
+                margin: 0 auto !important;
+            }
+            main {
+                display: contents !important;
+            }
+            aside {
+                grid-area: contact !important;
+                display: block !important;
+                width: auto !important;
+                background-color: #f9f9f9 !important;
+                margin-left: 10px !important;
+                border-left: 1px solid #eee !important;
+                padding: 20px !important;
+            }
+            .section {
+                width: 100% !important;
+            }
+            .contact-info p {
+                width: 100% !important;
+                display: flex !important;
+            }
+            .skills-table td {
+                display: table-cell !important;
+            }
+            .skill-category {
+                width: 30% !important;
+            }
+            /* 요소 숨김 방지 */
+            * {
+                visibility: visible !important;
+            }
+            body::after {
+                display: none !important;
+                content: none !important;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <header>
+        <header style="grid-area: header;">
             <h1 id="name"></h1>
             <p id="intro"></p>
         </header>
 
-        <main>
+        <main style="display: contents;">
             <!-- EXPERIENCE 섹션 -->
-            <section class="section">
+            <section class="section" style="break-inside: avoid; grid-area: experience;">
                 <h2>EXPERIENCE</h2>
                 <div id="experience-container"></div>
             </section>
 
             <!-- SKILLS 섹션 -->
-            <section class="section">
+            <section class="section" style="break-inside: avoid; grid-area: skills;">
                 <h2>SKILLS</h2>
                 <p id="skills-description" class="section-description">
 
@@ -33,35 +103,35 @@
             </section>
 
             <!-- PROJECTS 섹션 -->
-            <section class="section">
+            <section class="section" style="break-inside: avoid; grid-area: projects;">
                 <h2>PROJECTS</h2>
                 <div id="projects-container"></div>
             </section>
 
             <!-- CERTIFICATIONS 섹션 -->
-            <section class="section">
+            <section class="section" style="break-inside: avoid; grid-area: certifications;">
                 <h2>CERTIFICATIONS</h2>
                 <ul class="certification-list" id="certifications-list"></ul>
             </section>
 
             <!-- EDUCATION 섹션 -->
-            <section class="section">
+            <section class="section" style="break-inside: avoid; grid-area: education;">
                 <h2>EDUCATION</h2>
                 <ul class="education-list" id="education-list"></ul>
             </section>
         </main>
 
-        <aside>
+        <aside style="grid-area: contact; background-color: #f9f9f9 !important;">
             <section class="contact-info">
                 <h2>CONTACT</h2>
-                <p><i class="fas fa-phone"></i><span id="phone"></span></p>
-                <p><i class="fas fa-envelope"></i><span id="email"></span></p>
-                <p><i id="website-icon" class="fab fa-linkedin"></i><a id="website" href="#">Link</a></p>
+                <p style="display: flex; width: 100%;"><i class="fas fa-phone"></i><span id="phone"></span></p>
+                <p style="display: flex; width: 100%;"><i class="fas fa-envelope"></i><span id="email"></span></p>
+                <p style="display: flex; width: 100%;"><i id="website-icon" class="fab fa-linkedin"></i><a id="website" href="#">Link</a></p>
             </section>
         </aside>
     </div>
 
-    <footer>
+    <footer style="grid-area: footer;">
         <p>&copy; <span id="current-year"></span> - 오준혁</p>
     </footer>
 

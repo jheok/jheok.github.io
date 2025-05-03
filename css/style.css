@@ -298,7 +298,7 @@ footer {
 }
 
 /* 반응형 디자인 */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -362,4 +362,147 @@ footer {
 /* 웹사이트 정보 스타일링 */
 #website-icon {
     margin-right: 8px;
+}
+
+/* 프린트 미디어 스타일 */
+@media print {
+    /* 페이지 여백 설정 */
+    @page {
+        size: A4 portrait;
+        margin: 15mm;
+    }
+    
+    /* 기본 스타일 보존 */
+    body {
+        background-color: white !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* 그리드 레이아웃 보존 (중요) */
+    .container {
+        display: grid !important;
+        grid-template-columns: 4fr 1fr !important;
+        grid-template-areas: 
+            "header header"
+            "experience contact"
+            "skills skills"
+            "projects projects"
+            "certifications certifications"
+            "education education"
+            "footer footer" !important;
+        gap: 30px !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        width: auto !important;
+        padding: 20px 40px !important;
+        margin: 0 auto !important;
+    }
+    
+    main {
+        display: contents !important;
+    }
+    
+    /* 각 영역의 그리드 위치 명시적 지정 */
+    header {
+        grid-area: header !important;
+        border-bottom: 2px solid #eee !important;
+    }
+    
+    .section:nth-of-type(1) {
+        grid-area: experience !important;
+    }
+    
+    .section:nth-of-type(2) {
+        grid-area: skills !important;
+    }
+    
+    .section:nth-of-type(3) {
+        grid-area: projects !important;
+    }
+    
+    .section:nth-of-type(4) {
+        grid-area: certifications !important;
+    }
+    
+    .section:nth-of-type(5) {
+        grid-area: education !important;
+    }
+    
+    /* 사이드바 스타일 강제 지정 */
+    aside {
+        grid-area: contact !important;
+        background-color: #f9f9f9 !important;
+        border-radius: 5px !important;
+        padding: 20px !important;
+        margin-left: 10px !important;
+        border-left: 1px solid #eee !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    footer {
+        grid-area: footer !important;
+    }
+    
+    /* 내용물 스타일 명시적 지정 */
+    h1, h2, h3, h4, p, li, td {
+        color: #333 !important;
+    }
+    
+    h2 {
+        border-bottom: 2px solid #333 !important;
+        font-size: 24px !important;
+    }
+    
+    .contact-info h2 {
+        border-bottom: 1px solid #333 !important;
+        font-size: 20px !important;
+    }
+    
+    /* 링크 스타일 보존 */
+    a {
+        color: #007bff !important;
+    }
+    
+    /* 파일 경로 숨기기 */
+    body::after {
+        content: none !important;
+        display: none !important;
+    }
+    
+    /* 요소 숨김 방지 */
+    * {
+        visibility: visible !important;
+        overflow: visible !important;
+    }
+    
+    /* 모바일 레이아웃 재정의 */
+    .contact-info {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .contact-info p {
+        width: 100% !important;
+        margin-bottom: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .skills-table td {
+        display: table-cell !important;
+        width: auto !important;
+    }
+    
+    .skill-category {
+        width: 30% !important;
+    }
+    
+    .certification-list li, .education-list li {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
 } 
