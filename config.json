@@ -229,7 +229,7 @@
                         "Yacc(parser)와 Lex(tokenizer)를 이용하여 DSL 개발"
                     ],
                     "achievements": [
-                        "예시 사이트 (https://bigtori.kalis.or.kr)",
+                        "플랫폼 적용 사이트 (https://bigtori.kalis.or.kr)",
                         "기존의 복잡한 쿼리를 DSL 을 활용해 단순하고 가독성 높은 형태로 변환"
                     ],
                     "skills": "Python, FastApi, SQLAlchemy, Yacc, Lex, Pandas, Polars, Mysql, PostgreSQL, Redis, Memcached, Minio, HDFS, alembic, Jenkins, ArgoCD"
@@ -243,7 +243,9 @@
                         "Master-Slave 구조 적용으로 효율적인 리소스 사용"
                     ],
                     "achievements": [
-                        "ㅁㅁㅁㅁ"
+                        "EDA와 NLP 기술 도입으로 데이터 시각화 품질 개선",
+                        "GEO 폴리곤 데이터 처리 최적화로 지리 정보 분석 속도 향상",
+                        "Master-Slave 구조 적용을 통해 서버 리소스 사용률 개선 및 시스템 안정성 확보"
                     ],
                     "skills": "Java, Spring, JPA, Python, FastApi, SQLAlchemy, Mysql, TextRank, Mecab, Pandas"
                 },
@@ -255,7 +257,9 @@
                         "메타 데이터 조회 과정을 전체적으로 개선"
                     ],
                     "achievements": [
-                        "ㅁㅁㅁㅁ"
+                        "Flyway 도입으로 DB 스키마 버전 관리 자동화 및 배포 안정성 확보",
+                        "JPA 최적화를 통해 메타데이터 로딩 시간 초 단위에서 밀리 세컨드 단위로 단축 및 사용자 응답 시간 개선",
+                        "메타데이터 조회 로직 재설계로 복잡 쿼리 실행 시간 감소"
                     ],
                     "skills": "Python, FastApi, SQLAlchemy, Yacc, Lex, Pandas, Polars, Mysql, PostgreSQL, Redis, Memcached, Minio, HDFS, alembic, Jenkins, ArgoCD"
                 },
