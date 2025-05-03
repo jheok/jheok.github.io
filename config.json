@@ -139,6 +139,28 @@
             "period": "2023.09 ~ Present (정규직, 1년 8개월, 25.05 월 기준)",
             "projects": [
                 {
+                    "title": "데이터 환경 구축",
+                    "details": [
+                        "크림 모던 데이터 아키텍쳐 -> 람다 아키텍쳐 전환 계획 논의 및 CDC의 필요성 전파",
+                        "kafka-infra n2c 구축 (kafka-connect, kafka-ui, schema-registry, kafka-connector-template(자체 개발))",
+                        "debezium dev POC 후 CDC 기능 도입",
+                        "airsflow(naver가 airflow를 래핑한 프로젝트) POC",
+                        "DEV 용 DDP(datahub) POC",
+                        "embulk 를 통한 분석 전용 db 에 각종 데이터 적재",
+                        "real cdc 전용 DB 네이버 클라우드측과 논의",
+                        "개발 당시 네이버 측에서 제공하던 nginx 에 logrotate 기능이 추가된 베이스 이미지 개발",
+                        "Braze(CRM 마케팅 툴)에서 사용되는 외부 마케팅 푸시의 알림톡의 웹훅 기능 개발",
+                        "데이터 엔지니어 면접관 참여"
+                    ],
+                    "achievements": [
+                        "당시 주어진 임무는 없었지만 혼자 POC 및 개발을 진행하여 1차, 2차 리드들과 소통하며 데이터 인프라 개선",
+                        "데이터에 관리에 대한 필요성 및 데이터 엔지니어 채용의 필요성 전파",
+                        "CDC 를 활용한 준 실시간 데이터 적재 도입",
+                        "내부에 적재되지 않아 로깅 및 분석이 불가능 했던 외부 마케팅 푸시의 알림톡을 웹훅을 이용해 내부에 데이터 적재"
+                    ],
+                    "skills": "Naver Pasta, Nginx, Mysql, Kafka, Kafka-Connect, Schema-Registry, Debezium, Logstash, Filebeat, Elastic-Search, Sentry, Braze"
+                },
+                {
                     "title": "크림, 크림 어드민 (C2C) 서버 개발/운영",
                     "details": [
                         "파트너 C2C-전문판매자용 보관 판매 기능 개발",
@@ -176,28 +198,6 @@
                         "Nginx 의 로그에만 의존하여 Nelo(Log 모니터링툴)에 제대로 로깅 되지 않던 부분을 로그 미들웨어 개발로 인해 효율적인 로그 트레이싱 처리"
                     ],
                     "skills": "Naver Pasta, Python, FastApi, SQLAlchemy, Mysql, Kafka, Sentry, Redoc"
-                },
-                {
-                    "title": "데이터 환경 구축",
-                    "details": [
-                        "크림 모던 데이터 아키텍쳐 -> 람다 아키텍쳐 전환 계획 논의 및 CDC의 필요성 전파",
-                        "kafka-infra n2c 구축 (kafka-connect, kafka-ui, schema-registry, kafka-connector-template(자체 개발))",
-                        "debezium dev POC 후 CDC 기능 도입",
-                        "airsflow(naver가 airflow를 래핑한 프로젝트) POC",
-                        "DEV 용 DDP(datahub) POC",
-                        "embulk 를 통한 분석 전용 db 에 각종 데이터 적재",
-                        "real cdc 전용 DB 네이버 클라우드측과 논의",
-                        "개발 당시 네이버 측에서 제공하던 nginx 에 logrotate 기능이 추가된 베이스 이미지 개발",
-                        "Braze(CRM 마케팅 툴)에서 사용되는 외부 마케팅 푸시의 알림톡의 웹훅 기능 개발",
-                        "DE 면접관 참여"
-                    ],
-                    "achievements": [
-                        "당시 주어진 임무는 없었지만 혼자 POC 및 개발을 진행하여 1차, 2차 리드들과 소통하며 데이터 인프라 개선",
-                        "데이터에 관리에 대한 필요성 및 데이터 엔지니어 채용의 필요성 전파",
-                        "CDC 를 활용한 준 실시간 데이터 적재 도입",
-                        "내부에 적재되지 않아 로깅 및 분석이 불가능 했던 외부 마케팅 푸시의 알림톡을 웹훅을 이용해 내부에 데이터 적재"
-                    ],
-                    "skills": "Naver Pasta, Nginx, Mysql, Kafka, Kafka-Connect, Schema-Registry, Debezium, Logstash, Filebeat, Elastic-Search, Sentry, Braze"
                 }
             ]
         },
